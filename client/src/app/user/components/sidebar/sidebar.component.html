@@ -1,0 +1,34 @@
+<nav id="sidebar" class="sidebar-wrapper sidebar-dark">
+    <div class="sidebar-content">
+        <div class="sidebar-brand">
+            <a [routerLink]="'/user'"><img [src]="'/assets/images/logo-light.png'" alt=""></a>
+        </div>
+
+        <ul #simplebar class="sidebar-menu border-t border-white/10 cursor-pointer" data-simplebar style="height: calc(100% - 70px);">
+
+            <li [ngClass]="['/user', '/user/subscription-dashboard'].includes(activeMenu) ? 'active ms-0' : ''">
+                <a (click)="goToRoute('/user/subscription-dashboard')"><i class="mdi mdi-monitor-dashboard me-2 ms-1"></i>Dashboard</a>
+            </li>
+
+            <li [ngClass]="['/user', '/user/subscription-manage'].includes(activeMenu) ? 'active ms-0' : ''">
+                <a (click)="goToRoute('/user/subscription-manage')"><i class="mdi mdi-card-account-details-outline me-2 ms-1"></i>Manage subscription</a>
+            </li>
+
+            <li [ngClass]="activeMenu === '/profile-settings' ? 'active ms-0' : '' ">
+                <a (click)="goToRoute('/user/profile-settings')"><i class="mdi mdi-account-edit me-2"></i>{{'SIDEBAR.USER_PROF' | translate }}</a>
+            </li>
+
+            <li [ngClass]="activeMenu === '/blog' ? 'active ms-0' : ''">
+                <a (click)="goToRoute('/blog')"><i class="mdi mdi-post me-2"></i>Blog</a>
+            </li>
+
+            <li [ngClass]="activeMenu === '/past-winners' ? 'active ms-0' : ''">
+                <a (click)="goToRoute('/past-winners')"><i class="mdi mdi-trophy-outline me-2"></i>Past winners</a>
+            </li>
+
+            <li [ngClass]="activeMenu === '/contact' ? 'active ms-0' : ''">
+                <a (click)="goToRoute('/contact')"><i class="mdi mdi-account me-2"></i>Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>

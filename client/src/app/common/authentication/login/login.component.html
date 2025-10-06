@@ -1,0 +1,63 @@
+<section class="md:h-screen py-36 flex items-center relative overflow-hidden zoom-image">
+    <div class="absolute inset-0 image-wrap z-1 bg-[url('/assets/images/bg/01.jpg')] bg-no-repeat bg-center bg-cover"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black z-2" id="particles-snow"></div>
+    <div class="container relative z-3">
+        <div class="flex justify-center">
+            <div class="max-w-[400px] w-full m-auto p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-700 rounded-md">
+                <a routerLink="/"><img src="assets/images/logo-icon-64.png" class="mx-auto" alt=""></a>
+                <h5 class="my-6 text-xl text-center font-semibold">{{'LOGIN.TITLE' | translate }}</h5>
+                <form class="text-start">
+                    <div class="grid grid-cols-1">
+                        <div class="mb-4">
+                            <label class="font-medium" for="LoginEmail">{{'LOGIN.EMAIL.TITLE' | translate }}</label>
+                            <input class="form-input mt-3" id="LoginEmail" type="email" [(ngModel)]="email" (ngModelChange)="errors.email = false; errors.emailInvalid = false; errorMessage = '';" name="email" maxlength="100" placeholder="{{'LOGIN.EMAIL.PLACEHOLDER' | translate }}">
+                            @if (errors.email) {
+                                <label class="text-danger">
+                                    {{'LOGIN.EMAIL.REQUIRED' | translate }}
+                                </label>
+                            }
+                            @if (errors.emailInvalid) {
+                                <label class="text-danger">
+                                    {{'LOGIN.EMAIL.INCCORECT' | translate }}
+                                </label>
+                            }
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="font-medium" for="LoginPassword">{{'LOGIN.PASSWORD.TITLE' | translate }}</label>
+                            <input class="form-input mt-3" id="LoginPassword" type="password" [(ngModel)]="password" (ngModelChange)="errors.password = false; errorMessage = '';" name="password" maxlength="30" placeholder="{{'LOGIN.PASSWORD.PLACEHOLDER' | translate }}">
+                            @if (errors.password) {
+                                <label class="text-danger">
+                                    {{'LOGIN.PASSWORD.REQUIRED' | translate }}
+                                </label>
+                            }
+                        </div>
+
+                        <div class="flex justify-between mb-4">
+                            <div class="flex items-center mb-0">
+                                <input class="form-checkbox rounded border-gray-200 dark:border-gray-800 text-green-600 focus:border-green-300 focus:ring focus:ring-offset-0 focus:ring-green-200 focus:ring-opacity-50 me-2" type="checkbox" value="" id="RememberMe">
+                                <label class="form-checkbox-label text-slate-400" for="RememberMe">{{'LOGIN.REMEMBER' | translate }}</label>
+                            </div>
+                            <p class="text-slate-400 mb-0"><a routerLink="/forgot-password" class="text-slate-400">{{'LOGIN.FORGOT' | translate }}</a></p>
+                        </div>
+
+                        <div class="mb-4">
+                            <button class="btn bg-green-600 hover:bg-green-700 text-white rounded-md w-full" (click)="handleSubmit()">{{'LOGIN.BTN_LOGIN' | translate }}</button>
+                        </div>
+
+                        <div class="text-center">
+                            <span class="text-slate-400 me-2">{{'LOGIN.MSG_SIGNUP' | translate }}</span> <a routerLink="/signup" class="text-black dark:text-white font-bold">{{'LOGIN.SIGNUP' | translate }}</a>
+                        </div>
+
+                        @if (errorMessage) {
+                            <div class="auth-error">{{errorMessage}}</div>
+                        }
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="fixed bottom-3 end-3 z-10">
+    <a routerLink="/" class="back-button btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full"><i class="mdi mdi-arrow-left"></i></a>
+</div>

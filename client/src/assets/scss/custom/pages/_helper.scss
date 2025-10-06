@@ -1,0 +1,201 @@
+/*********************************/
+/*             Helper            */
+/*===============================*/
+.container {
+    @apply relative;
+}
+
+.divider-text {
+  font-size: 18px;
+  color: black;
+}
+.dark .divider-text {
+  color: white;
+}
+
+.divider {
+  border: none;
+  border-top: 0.1px solid #c1c1c1;
+  width: 100%;
+  margin-top: 2px;
+}
+
+/* Preloader */
+#preloader {
+    background-image: linear-gradient(45deg, #ffffff, #ffffff);
+    z-index: 99999;
+    @apply fixed inset-0;
+    #status {
+        @apply absolute start-0 end-0 top-1/2 -translate-y-1/2;
+        .spinner {
+            @apply size-10 relative my-[100px] mx-auto;
+            .double-bounce1, .double-bounce2 {
+                @apply w-full h-full rounded-full bg-green-600/60 absolute top-0 start-0;
+                animation: sk-bounce 2.0s infinite ease-in-out;
+            }
+            .double-bounce2 {
+                animation-delay: -1.0s;
+            }
+        }
+    }
+}
+
+@keyframes sk-bounce {
+    0%, 100% {
+      transform: scale(0.0);
+    } 50% {
+      transform: scale(1.0);
+    }
+}
+
+/* Shapes */
+.shape {
+    @apply absolute end-0 -bottom-px start-0;
+    &>svg {
+        @apply w-full h-auto;
+        transform: scale(2);
+        transform-origin: theme('transformOrigin.top') theme('transformOrigin.center');
+    }
+}
+@media (max-width: 425px) {
+    .shape {
+        @apply -bottom-[2px];
+    }
+}
+
+/* Switcher */
+.label {
+  .ball {
+      transition: transform 0.2s linear;
+      @apply translate-x-0;
+  }
+}
+
+.checkbox:checked + .label .ball {
+@apply translate-x-6;
+}
+
+/*********************************/
+/*         Tobii Lightbox        */
+/*===============================*/
+/* Tobii Lighbox */
+.tobii>button.tobii__close svg,
+.tobii>button.tobii__prev svg,
+.tobii>button.tobii__next svg {
+    @apply h-9 w-auto;
+}
+
+.tobii__counter {
+    @apply text-base;
+}
+
+.tobii-zoom {
+    @apply block;
+}
+
+.tobii-zoom__icon {
+    @apply hidden;
+}
+
+#grid {
+    @apply p-0;
+}
+
+/* ------ng-select-------- */
+
+.ng-dropdown-panel {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  position: absolute !important;
+  opacity: 0;
+  width: 100%;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+  top: 100% !important;
+  left: 0 !important;
+  --tw-text-opacity: 1 !important;
+  // color: rgb(148 163 184 / var(--tw-text-opacity)) !important;
+}
+:is(.dark .ng-dropdown-panel){
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity)) !important;
+}
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 12px 15px !important;
+}
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity)) !important;
+}
+:is(.dark .ng-dropdown-panel .ng-dropdown-panel-items .ng-option:hover){
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.ng-select .ng-select-container {
+  height: 100%;
+}
+
+.ng-value-container, .ng-has-value {
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#d9d9d9;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f9fafb ;
+}
+/* ------ng-select-------- */
+
+ul li{
+  -webkit-margin-start: 0.25rem;
+  margin-inline-start: 0.25rem;
+}
+ul li:first-child{
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+/* //video iframe */
+@media (max-width: 640px)  {
+  iframe{
+    width: 500px !important;
+    height: 300px !important;
+  }
+}
+@media (max-width: 425px) {
+  iframe{
+    width: 360px !important;
+    height: 260px !important;
+  }
+}
+@media (max-width: 375px) {
+  iframe{
+    width: 100% !important;
+    height: auto !important;
+  }
+}

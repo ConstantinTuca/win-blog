@@ -1,0 +1,126 @@
+<div class="page-wrapper toggled" [ngClass]="{ 'toggled': activeSidebar }">
+    <app-admin-sidebar/>
+
+    <main class="page-content bg-gray-50 dark:bg-slate-800">
+        <app-admin-topbar (toggleClass)="toggleClass()"/>
+
+        <div class="container-fluid relative px-3">
+            <div class="layout-specing">
+                <div class="min-h-screen bg-gray-50 p-8">
+                  <div class="max-w-7xl mx-auto">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-6">{{ isEditMode ? 'Edit Winner' : 'Add New Winner' }}</h1>
+
+                    <form class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                      <!-- Form Fields -->
+                      <div class="lg:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-gray-200 space-y-6">
+                        <!-- User -->
+                        <div>
+                          <label class="block text-sm font-medium text-gray-700">User</label>
+                          <ng-select [(ngModel)]='winner.id_user' [items]='users' name='id_user' bindLabel='full_name' bindValue='id' [searchFn]="customSearchFn"
+                            [clearable]='false' (change)='selectUser($event)' placeholder='Pick the user!'
+                            class="mt-1 p-2 block w-full rounded-xl border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                            <ng-template ng-label-tmp let-item="item">
+                              {{item.id}} - name: {{item.full_name}}
+                            </ng-template>
+                            <ng-template ng-option-tmp let-item="item" let-search="searchTerm" let-index="index">
+                              {{item.id}} - name: {{item.full_name}}
+                            </ng-template>
+                          </ng-select>
+                          @if(flagSubmitted && !winner.id_user) {
+                            <div class="text-red-500 text-sm mt-1">
+                              The user is required.
+                            </div>
+                          }
+                        </div>
+
+                        <!-- Full name -->
+                        <div>
+                          <label class="block text-sm font-medium text-gray-700">Full name</label>
+                          <input
+                            type="text"
+                            name="full_name"
+                            [(ngModel)]="winner.full_name"
+                            required
+                            placeholder="Enter your winner full name"
+                            class="mt-1 p-2 block w-full rounded-xl border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                          />
+                          @if(flagSubmitted && !winner.full_name) {
+                            <div class="text-red-500 text-sm mt-1">
+                              The full name is required.
+                            </div>
+                          }
+                        </div>
+
+                        <!-- Confesion -->
+                        <div>
+                          <label class="block text-sm font-medium text-gray-700">Confesion</label>
+                          <textarea
+                            name="confesion"
+                            [(ngModel)]="winner.confesion"
+                            required
+                            rows="8"
+                            placeholder="Write your winner confesion..."
+                            class="mt-1 p-2 block w-full rounded-xl border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                          ></textarea>
+                          @if(flagSubmitted && !winner.confesion) {
+                            <div class="text-red-500 text-sm mt-1">
+                              Confesion is required.
+                            </div>
+                          }
+                        </div>
+
+                        <!-- Date & Status -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div>
+                            <label class="block text-sm font-medium text-gray-700">Date</label>
+                            <input
+                              type="date"
+                              name="date"
+                              [(ngModel)]="winner.date"
+                              required
+                              class="mt-1 p-2 block w-full rounded-xl border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                            />
+                            @if(flagSubmitted && !winner.date) {
+                              <div class="text-red-500 text-sm mt-1">
+                                Date is required.
+                              </div>
+                            }
+                          </div>
+                          <div>
+                            <label class="block text-sm font-medium text-gray-700">Prize</label>
+                            <input
+                              type="number"
+                              name="prize"
+                              [(ngModel)]="winner.prize"
+                              class="mt-1 p-2 block w-full rounded-xl border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                            />
+                            @if(flagSubmitted && !winner.prize) {
+                              <div class="text-red-500 text-sm mt-1">
+                                The prize is required.
+                              </div>
+                            }
+                          </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="flex justify-end gap-4 mt-6">
+                          <button
+                            type="button"
+                            (click)="save()"
+                            class="px-6 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 transition shadow-sm"
+                          >
+                            {{ isEditMode ? 'Update Winner' : 'Create Winner' }}
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <app-admin-footer/>
+    </main>
+</div>
+
+

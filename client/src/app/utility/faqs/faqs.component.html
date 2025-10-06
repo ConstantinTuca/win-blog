@@ -1,0 +1,105 @@
+<app-navbar [childMessage]="'true'" [navLight]="true"/>
+
+<section class="relative table w-full py-32 lg:py-36 bg-[url('/assets/images/bg/01.jpg')] bg-no-repeat bg-center bg-cover">
+    <div class="absolute inset-0 bg-black opacity-80"></div>
+    <div class="container relative">
+        <div class="grid grid-cols-1 text-center mt-10">
+            <h3 class="md:text-4xl text-3xl md:leading-normal leading-normal font-medium text-white">{{ "FAQS.TITLE" | translate }}</h3>
+        </div><!--end grid-->
+    </div><!--end container-->
+</section><!--end section-->
+<div class="relative">
+    <div class="shape overflow-hidden z-1 text-white dark:text-slate-900">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+        </svg>
+    </div>
+</div>
+
+<section class="relative lg:py-24 py-16">
+    <div class="container relative">
+        <div class="flex justify-center">
+            <div class="lg:w-3/4">
+                <div id="tech">
+                    <h5 class="text-2xl font-semibold">Buying Product</h5>
+
+                    <div class="mt-6">
+                        <div *ngFor="let item of faqDataBuy" class="relative shadow dark:shadow-gray-700 rounded-md overflow-hidden mt-4">
+                            <h2 class="text-lg font-medium" id="accordion-collapse-heading-1">
+                                <button type="button" class="flex justify-between items-center p-5 w-full font-medium text-start" (click)="toggleBox(item.id)" [ngClass]="activeIndex === item.id ? 'bg-gray-50 dark:bg-slate-800 text-green-600' : '' ">
+                                    <span>{{ "FAQS.BUY." + item.id + ".QUESTION" | translate }}</span>
+                                    <svg data-accordion-icon class="size-4 shrink-0" [ngClass]="activeIndex === item.id ? 'rotate-180 ' : '' " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-collapse-body-1" [ngClass]="activeIndex === item.id ? '' : 'hidden' ">
+                                <div class="p-5">
+                                    <p class="text-slate-400 dark:text-gray-400">{{ "FAQS.BUY." + item.id + ".ANSWER" | translate }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="general" class="mt-8">
+                    <h5 class="text-2xl font-semibold">General Questions</h5>
+
+                    <div class="mt-6">
+                        <div *ngFor="let item of faqDataGeneral" class="relative shadow dark:shadow-gray-700 rounded-md overflow-hidden mt-4">
+                            <h2 class="text-lg font-medium" id="accordion-collapse-heading-1">
+                                <button type="button" class="flex justify-between items-center p-5 w-full font-medium text-start" (click)="toggleBox2(item.id)" [ngClass]="activeIndex2 === item.id ? 'bg-gray-50 dark:bg-slate-800 text-green-600' : '' ">
+                                    <span>{{ "FAQS.GENERAL." + item.id + ".QUESTION" | translate }}</span>
+                                    <svg data-accordion-icon class="size-4 shrink-0" [ngClass]="activeIndex2 === item.id ? 'rotate-180 ' : '' " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-collapse-body-1" [ngClass]="activeIndex2 === item.id ? '' : 'hidden' ">
+                                <div class="p-5">
+                                    <p class="text-slate-400 dark:text-gray-400">{{ "FAQS.GENERAL." + item.id + ".ANSWER" | translate }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="support" class="mt-8">
+                    <h5 class="text-2xl font-semibold">Support Questions</h5>
+
+                    <div class="mt-6">
+                        <div *ngFor="let item of faqDataSupport" class="relative shadow dark:shadow-gray-700 rounded-md overflow-hidden mt-4">
+                            <h2 class="text-lg font-medium" id="accordion-collapse-heading-1">
+                                <button type="button" class="flex justify-between items-center p-5 w-full font-medium text-start" (click)="toggleBox3(item.id)" [ngClass]="activeIndex3 === item.id ? 'bg-gray-50 dark:bg-slate-800 text-green-600' : '' ">
+                                    <span>{{ "FAQS.SUPPORT." + item.id + ".QUESTION" | translate }}</span>
+                                    <svg data-accordion-icon class="size-4 shrink-0" [ngClass]="activeIndex3 === item.id ? 'rotate-180 ' : '' " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-collapse-body-1" [ngClass]="activeIndex3 === item.id ? '' : 'hidden' ">
+                                <div class="p-5">
+                                    <p class="text-slate-400 dark:text-gray-400">{{ "FAQS.SUPPORT." + item.id + ".ANSWER" | translate }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--end grid-->
+    </div><!--end container-->
+
+    <div class="container relative lg:mt-24 mt-16">
+        <div class="grid grid-cols-1 text-center">
+            <h3 class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-medium text-black dark:text-white">{{ "FAQS.CONTACT.TITLE" | translate }}</h3>
+
+            <p class="text-slate-400 max-w-xl mx-auto">{{ "FAQS.CONTACT.SUBTITLE" | translate }}</p>
+
+            <div class="mt-6">
+                <a routerLink="/contact" class="btn bg-green-600 hover:bg-green-700 text-white rounded-md"><i class="uil uil-phone align-middle me-2"></i> {{ "FAQS.CONTACT.BUTTON" | translate }}</a>
+            </div>
+        </div><!--end grid-->
+    </div><!--end container-->
+</section>
+
+<app-footer/>

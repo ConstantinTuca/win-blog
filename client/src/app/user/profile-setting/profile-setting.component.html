@@ -1,0 +1,153 @@
+<div class="page-wrapper toggled" [ngClass]="{ 'toggled': activeSidebar }">
+   <app-sidebar/>
+
+    <main class="page-content bg-gray-50 dark:bg-slate-800">
+        <app-topbar (toggleClass)="toggleClass()"/>
+
+        <div class="container-fluid relative px-3">
+            <div class="layout-specing">
+                <div class="grid md:grid-cols-12 grid-cols-1 gap-6 mt-6">
+                    <div class="xl:col-span-3 lg:col-span-4 md:col-span-4">
+                        <div class="p-6 relative rounded-md shadow dark:shadow-gray-700 bg-white dark:bg-slate-900">
+                            <div class="profile-pic text-center">
+                                <input id="pro-img" name="profile-image" type="file" class="hidden" (change)="handleFileInput($event)" max-size='8000' accept="image/jpeg,image/gif,image/png"/>
+                                <div>
+                                    <div class="relative size-24 mx-auto">
+                                        <img [src]="userDetails.profile_pic" class="rounded-full shadow dark:shadow-gray-700 ring-4 ring-slate-50 dark:ring-slate-800" id="profile-image" alt="">
+                                        <label class="absolute inset-0 cursor-pointer" for="pro-img"></label>
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <h5 class="text-lg font-semibold">{{userDetails.full_name}}</h5>
+                                        <p class="text-slate-400">{{userDetails.email}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <a [routerLink]="'/user/my-property'" class="btn bg-gray-600 hover:bg-gray-700 w-full text-white rounded-md mt-2"> {{'PROFILE_SETTING.BTN_MY' | translate }}</a>
+                            <a [routerLink]="'/user/favorite-property'" class="btn bg-green-600 hover:bg-green-700 w-full text-white rounded-md mt-2"> {{'PROFILE_SETTING.BTN_FAV' | translate }}</a>
+                        </div>
+                    </div>
+
+
+                    <div class="xl:col-span-9 lg:col-span-8 md:col-span-8">
+                        <div class="grid grid-cols-1 gap-6">
+                            @if(!userDetails.validated_email) {
+                                <div class="p-6 relative rounded-md shadow dark:shadow-gray-700 bg-white dark:bg-slate-900 border border-gray-300">
+                                    <h5 class="text-lg font-semibold mb-4">{{'PROFILE_SETTING.VALIDATE_EMAIL.TITLE' | translate }} :</h5>
+
+                                    <p class="text-slate-400 mb-4">{{'PROFILE_SETTING.VALIDATE_EMAIL.SUBTITLE' | translate }}</p>
+
+                                    <a [routerLink]="[]" (click)="validateEmail()" class="btn bg-gray-600 hover:bg-gray-700 text-white rounded-md">{{'PROFILE_SETTING.VALIDATE_EMAIL.BTN' | translate }}</a>
+                                </div>
+                            }
+
+                            <div class="p-6 relative rounded-md shadow dark:shadow-gray-700 bg-white dark:bg-slate-900">
+                                <h5 class="text-lg font-semibold mb-4">{{'PROFILE_SETTING.TITLE' | translate }} :</h5>
+                                <form>
+                                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                        <div>
+                                            <label class="form-label font-medium">{{'PROFILE_SETTING.FIRST_NAME.TITLE' | translate }} : <span class="text-red-600">*</span></label>
+                                            <div class="form-icon relative mt-2">
+                                                <i data-feather="user" class="size-4 absolute top-3 start-4"></i>
+                                                <input type="text" class="form-input ps-12 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-green-600 dark:border-gray-800 dark:focus:border-green-600 focus:ring-0" [(ngModel)]="userDetails.first_name" (ngModelChange)='required.first_name = !userDetails.first_name' [ngClass]='required.first_name ? "error-border" : ""' placeholder="{{'PROFILE_SETTING.FIRST_NAME.PLACEHOLDER' | translate }}:" id="firstname" name="name">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="form-label font-medium">{{'PROFILE_SETTING.LAST_NAME.TITLE' | translate }}: <span class="text-red-600">*</span></label>
+                                            <div class="form-icon relative mt-2">
+                                                <i data-feather="user-check" class="size-4 absolute top-3 start-4"></i>
+                                                <input type="text" class="form-input ps-12 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-green-600 dark:border-gray-800 dark:focus:border-green-600 focus:ring-0" [(ngModel)]="userDetails.last_name" (ngModelChange)='required.last_name = !userDetails.last_name' [ngClass]='required.last_name ? "error-border" : ""' placeholder="{{'PROFILE_SETTING.LAST_NAME.PLACEHOLDER' | translate }} :" id="lastname" name="last_name" required="">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="form-label font-medium">{{'PROFILE_SETTING.EMAIL.TITLE' | translate }}: <span class="text-red-600">*</span></label>
+                                            <div class="form-icon relative mt-2">
+                                                <i data-feather="mail" class="size-4 absolute top-3 start-4"></i>
+                                                <input type="email" class="form-input ps-12 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-green-600 dark:border-gray-800 dark:focus:border-green-600 focus:ring-0" [(ngModel)]="userDetails.email" (ngModelChange)='required.email = !userDetails.email' [ngClass]='required.email ? "error-border" : ""' placeholder="{{'PROFILE_SETTING.EMAIL.PLACEHOLDER' | translate }}:" name="email" required="">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="form-label font-medium">{{'PROFILE_SETTING.WEBSITE.TITLE' | translate }} :</label>
+                                            <div class="form-icon relative mt-2">
+                                                <i data-feather="globe" class="size-4 absolute top-3 start-4"></i>
+                                                <input name="url" id="url" type="text" class="form-input ps-12 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-green-600 dark:border-gray-800 dark:focus:border-green-600 focus:ring-0" [(ngModel)]="userDetails.website" placeholder="{{'PROFILE_SETTING.WEBSITE.PLACEHOLDER' | translate }}">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="form-label font-medium">{{'PROFILE_SETTING.PHONE.TITLE' | translate }} :</label>
+                                                <div class="form-icon relative mt-2">
+                                                    <i data-feather="phone" class="size-4 absolute top-3 start-4"></i>
+                                                    <input name="phone" id="phone" type="text" class="form-input ps-12 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-green-600 dark:border-gray-800 dark:focus:border-green-600 focus:ring-0" [(ngModel)]="userDetails.phone" placeholder="{{'PROFILE_SETTING.PHONE.PLACEHOLDER' | translate }}">
+                                                </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1">
+                                        <div class="mt-5">
+                                            <label class="form-label font-medium">{{'PROFILE_SETTING.DESCRIPTION.TITLE' | translate }}</label>
+                                            <div class="form-icon relative mt-2">
+                                                <i data-feather="message-circle" class="size-4 absolute top-3 start-4"></i>
+                                                <textarea type="text" name="description" id="description" class="form-input ps-11 w-full py-2 px-3 h-28 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-green-600 dark:border-gray-800 dark:focus:border-green-600 focus:ring-0" [(ngModel)]="userDetails.description"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button (click)="save()" class="btn bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md mt-5">{{'PROFILE_SETTING.BTN_SAVE' | translate }}</button>
+                                </form>
+                            </div>
+
+                            <div class="p-6 relative rounded-md shadow dark:shadow-gray-700 bg-white dark:bg-slate-900">
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-6">
+                                    <div>
+                                        <h5 class="text-lg font-semibold mb-4">{{'PROFILE_SETTING.PASSWORD.TITLE' | translate }} :</h5>
+                                        <form>
+                                            <div class="grid grid-cols-1 gap-5">
+                                                <div>
+                                                    <label class="form-label font-medium">{{'PROFILE_SETTING.PASSWORD.OLD.TITLE' | translate }}  :</label>
+                                                    <div class="form-icon relative mt-2">
+                                                        <i data-feather="key" class="size-4 absolute top-3 start-4"></i>
+                                                        <input [(ngModel)]="userDetails.old_password" (ngModelChange)='required.old_password = !userDetails.old_password' [ngClass]='required.old_password ? "error-border" : ""' name="old_password" type="password" class="form-input ps-12 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-green-600 dark:border-gray-800 dark:focus:border-green-600 focus:ring-0" placeholder="{{'PROFILE_SETTING.PASSWORD.OLD.PLACEHOLDER' | translate }}" required="">
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <label class="form-label font-medium">{{'PROFILE_SETTING.PASSWORD.NEW.TITLE' | translate }} :</label>
+                                                    <div class="form-icon relative mt-2">
+                                                        <i data-feather="key" class="size-4 absolute top-3 start-4"></i>
+                                                        <input [(ngModel)]="userDetails.new_password" (ngModelChange)='required.new_password = !userDetails.new_password' [ngClass]='required.new_password ? "error-border" : ""' name="new_password" type="password" class="form-input ps-12 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-green-600 dark:border-gray-800 dark:focus:border-green-600 focus:ring-0" placeholder="{{'PROFILE_SETTING.PASSWORD.NEW.PLACEHOLDER' | translate }}" required="">
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <label class="form-label font-medium">{{'PROFILE_SETTING.PASSWORD.RETYPE.TITLE' | translate }} :</label>
+                                                    <div class="form-icon relative mt-2">
+                                                        <i data-feather="key" class="size-4 absolute top-3 start-4"></i>
+                                                        <input [(ngModel)]="userDetails.retype_password" (ngModelChange)='required.retype_password = !userDetails.retype_password' [ngClass]='required.retype_password ? "error-border" : ""' name="retype_password" type="password" class="form-input ps-12 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-green-600 dark:border-gray-800 dark:focus:border-green-600 focus:ring-0" placeholder="{{'PROFILE_SETTING.PASSWORD.RETYPE.PLACEHOLDER' | translate }}" required="">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <button (click)="handleSubmit()" class="btn bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md mt-5">{{'PROFILE_SETTING.PASSWORD.BTN_SAVE' | translate }}</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-6 relative rounded-md shadow dark:shadow-gray-700 bg-white dark:bg-slate-900">
+                                <h5 class="text-lg font-semibold mb-4 text-red-600">{{'PROFILE_SETTING.DELETE.TITLE' | translate }} :</h5>
+
+                                <p class="text-slate-400 mb-4">{{'PROFILE_SETTING.DELETE.SUBTITLE' | translate }}</p>
+
+                                <a [routerLink]="[]" (click)="delete()" class="btn bg-red-600 hover:bg-red-700 border-red-600 hover:border-red-700 text-white rounded-md">{{'PROFILE_SETTING.DELETE.BTN' | translate }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <app-footer/>
+    </main>
+</div>

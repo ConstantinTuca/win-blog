@@ -1,0 +1,37 @@
+<nav id="sidebar" class="sidebar-wrapper sidebar-dark">
+    <div class="sidebar-content">
+        <div class="sidebar-brand">
+            <a [routerLink]="'/admin'"><img [src]="'/assets/images/logo-light.png'" alt=""></a>
+        </div>
+
+        <ul #simplebar class="sidebar-menu border-t border-white/10 cursor-pointer" data-simplebar style="height: calc(100% - 70px);">
+            <li [ngClass]="activeMenu === '/admin' ? 'active ms-0' : ''">
+                <a (click)="goToRoute('/admin')"><i class="mdi mdi-chart-bell-curve-cumulative me-2 ms-1"></i>Dashboard</a>
+            </li>
+
+            <li [ngClass]="activeMenu === '/admin/manage-posts' ? 'active ms-0' : ''">
+                <a (click)="goToRoute('/admin/manage-posts')"><i class="mdi mdi-clipboard-clock-outline me-2"></i>Manage posts</a>
+            </li>
+
+            <li [ngClass]="activeMenu === '/admin/add-blog-post' ? 'active ms-0' : ''">
+                <a (click)="goToRoute('/admin/add-blog-post')"><i class="mdi mdi-book-plus me-2"></i>Add new blog post</a>
+            </li>
+
+            <li [ngClass]="activeMenu === '/admin/manage-winners' ? 'active ms-0' : ''">
+                <a (click)="goToRoute('/admin/manage-winners')"><i class="mdi mdi-account-group me-2"></i>Manage winners</a>
+            </li>
+
+            <li [ngClass]="activeMenu === '/admin/add-winner' ? 'active ms-0' : ''">
+                <a (click)="goToRoute('/admin/add-winner')"><i class="mdi mdi-book-plus me-2"></i>Add new winner</a>
+            </li>
+
+            <li [ngClass]="activeMenu === '/admin/admin-subscriptions' ? 'active ms-0' : ''">
+                <a (click)="goToRoute('/admin/admin-subscriptions')"><i class="mdi mdi-card-account-details-outline me-2"></i>Manage subscriptions</a>
+            </li>
+
+            <li [ngClass]="activeMenu === '/admin/errors' ? 'active ms-0' : ''">
+                <a (click)="goToRoute('/admin/errors')"><i class="mdi mdi-alert me-2"></i>Errors</a>
+            </li>
+        </ul>
+    </div>
+</nav>

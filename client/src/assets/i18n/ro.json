@@ -1,0 +1,989 @@
+{
+  "HOME": {
+    "TITLE": "Un mod ușor de a-ți găsi terenul de vis",
+    "SUBTITLE": "O platformă excelentă pentru a cumpăra și închiria terenuri fără agenți și fără comisioane",
+    "SELL": "Terenuri de vânzare",
+    "RENT": "Terenuri de închiriat",
+    "YEARS": "Ani de experiență",
+    "ERROR": "Eroare",
+    "COUNTRY": "Eroare la preluarea țărilor!",
+    "COUNTY": "Eroare la preluarea județelor!",
+    "LOCALITY": "Eroare la preluarea localităților!",
+    "VILLAGE": "Eroare la preluarea satelor!"
+  },
+
+  "LANDS": {
+    "TITLE": "Caută terenuri",
+    "PRICE": "Preț",
+    "PRICE_PER": "Preț pe",
+    "PAYMENT": "Tip plată",
+    "NO_DATA_TITLE" : "Niciun teren gasit",
+    "NO_DATA" : "Ups, asta e stânjenitor. Se pare că nu s-au găsit proprietăți pe baza filtrelor aplicate.",
+    "ERROR" : "Eroare",
+    "FAV_SUCCESS": "Anunțul a fost setat ca favorit!",
+    "FAV_ERR": "Eroare la setarea anunțului!"
+  },
+
+  "LAND_FILTER": {
+    "BTN_BUY": "Cumpără",
+    "BTN_RENT": "Închiriază",
+    "DESCRIPTION": {
+      "TITLE": "Caută în descriere",
+      "PLACEHOLDER": "Caută cuvinte cheie"
+    },
+    "LOCATION": {
+      "TITLE": "Locație",
+      "COUNTRY": {
+        "TITLE": "Țară",
+        "PLACEHOLDER": "Țară"
+      },
+      "COUNTY": {
+        "TITLE": "Județ",
+        "PLACEHOLDER": "Județ"
+      },
+      "LOCALITY": {
+        "TITLE": "Localitate",
+        "PLACEHOLDER": "Localitate"
+      },
+      "VILLAGE": {
+        "TITLE": "Oraș",
+        "PLACEHOLDER": "Oraș"
+      },
+      "STREET": {
+        "TITLE": "Stradă",
+        "PLACEHOLDER": "Stradă"
+      }
+    },
+    "MIN_PRICE": {
+      "TITLE": "Preț Minim",
+      "PLACEHOLDER": "De la"
+    },
+    "MAX_PRICE": {
+      "TITLE": "Preț Maxim",
+      "PLACEHOLDER": "Până la"
+    },
+    "BTN_SEARCH": "Caută",
+    "MORE" : "Mai multe",
+    "LESS" : "Mai puține",
+    "FILTERS": "Filtre",
+    "RESET" : "Resetează",
+    "MIN_SURFACE" : {
+      "TITLE" : "Suprafața minimă",
+      "PLACEHOLDER" : "De la"
+    },
+    "MAX_SURFACE" : {
+      "TITLE" : "Suprafața maximă",
+      "PLACEHOLDER" : "Până la"
+    },
+    "TYPE": {
+      "TITLE": "Tip teren",
+      "PLACEHOLDER": "Tip teren",
+      "DATA": {
+          "BUILDING": "pentru construcție",
+          "AGRICULTURAL": "Agricol",
+          "RECREATIONAL": "Recreațional",
+          "COMMERCIAL": "Comercial",
+          "WOOD": "Padure",
+          "MIXT": "Mixt",
+          "OTHER" : "Altele"
+        }
+    },
+    "MIN_PRICE_M2" : {
+      "TITLE" : "Prețul minim pe m2",
+      "PLACEHOLDER" : "De la"
+    },
+    "MAX_PRICE_M2" : {
+      "TITLE" : "Prețul maxim pe m2",
+      "PLACEHOLDER" : "Până la"
+    },
+    "FACILITIES": {
+      "TITLE": "Facilități",
+      "ELECTRICITY" : "electricitate",
+      "WATER" : "apa",
+      "GAS" : "gaz",
+      "TELEPHONE" : "telefon",
+      "DRAINAGE" : "drenaj",
+      "SEPTIC_TANK" : "fosă septică"
+    },
+    "SORT": {
+      "TITLE" : "Sortează după",
+      "IMPLICIT" : "Implicit",
+      "NEW" : "Cele mai noi",
+      "OLD" : "Cele mai vechi",
+      "ASC" : "Preț crescător",
+      "DESC": "Preț descrescător",
+      "AREA_ASC" : "Cea mai mică suprafață",
+      "AREA_DESC": "Cea mai mare suprafață"
+    }
+  },
+
+  "LOCATION_FILTER": {
+    "PLACEHOLDER": "Selectează locația",
+    "PLACEHOLDER_INPUT": "Tastează denumirea locației"
+  },
+
+  "FEATURED_PROPERTIES": {
+    "TITLE": "Cele mai noi terenuri",
+    "SUBTITLE": "Aici găsești cele mai noi terenuri adăugate pe platformă"
+  },
+
+  "FEATURED": {
+    "TITLE": "Ce poți face?",
+    "SELL" : {
+      "TITLE": "Vinde un teren",
+      "DESCRIPTION": "Avem un trafic constant de utilizatori care caută terenuri, fie că sunt pentru investiții, construcția unei locuințe sau agricultură"
+    },
+    "EXPLORE" : {
+      "TITLE": "Descoperă terenuri",
+      "DESCRIPTION": "Răsfoiește numeroasele anunțuri de pe platformă și găsește rapid ceea ce cauți cu ajutorul filtrelor noastre personalizate"
+    },
+    "RENT" : {
+      "TITLE": "Închiriază",
+      "DESCRIPTION": "Pe această platformă găsești o mulțime de terenuri de închiriat. Tot ce trebuie să faci este să derulezi și să le explorezi"
+    }
+  },
+
+  "CONTACT": {
+    "TITLE": "Suntem aici să te ajutăm!",
+    "SUBTITLE": "Contactați-ne!",
+    "NAME": {
+      "TITLE": "Numele tău",
+      "PLACEHOLDER": "Nume"
+    },
+    "EMAIL": {
+      "TITLE": "Email-ul tău",
+      "PLACEHOLDER": "Email"
+    },
+    "QUESTION": {
+      "TITLE": "Întrebarea ta",
+      "PLACEHOLDER": "Subiect"
+    },
+    "COMMENT": {
+      "TITLE": "Comentariul tău",
+      "PLACEHOLDER": "Mesaj"
+    },
+    "BTN_SEND": {
+      "TITLE": "Trimite mesaj"
+    },
+    "MSG_ERR": {
+      "NAME": "Numele acestui formular de contact este obligatoriu!",
+      "EMAIL": "Emailul acestui formular de contact este obligatoriu!",
+      "EMAIL_INCORRECT": "Emailul acestui formular de contact este incorect!",
+      "SUBJECT": "Subiectul acestui formular de contact este obligatoriu!",
+      "MESSAGE": "Mesajul acestui formular de contact este obligatoriu!",
+      "SEND_SUCCESS": "Mesajul a fost trimis cu succes!",
+      "SEND_ERROR": "Eroare la trimiterea mesajului!",
+      "MODAL_TITLE_SAVE" : "Trimitere mesaj",
+      "MODAL_CONTENT_SAVE" : "Ești sigur că vrei să trimiți acest mesaj? ",
+      "MODAL_YES" : "Da",
+      "MODAL_NO" : "Nu",
+      "MODAL_DISMISS" : "Mesajul nu a fost trimis!"
+    }
+  },
+
+  "NAVBAR": {
+    "HOME": "Acasă",
+    "BUY": "Cumpără",
+    "SELL": "Vinde",
+    "CONTACT": "Contact",
+    "SIGNUP": "Înregistrare",
+    "ADS": "Anunțuri din țara",
+    "LANGUAGE": "Limbă",
+    "CURRENCY": "Monedă",
+    "MSG_ERROR": "Serviciul nostru nu este disponibil încă în această țară. Revenim în curând!"
+  },
+
+  "SIDEBAR": {
+    "DASHBOARD": "Dashboard",
+    "VIEW_PROP": "Proprietățile mele",
+    "FAV_PROP": "Proprietăți favorite",
+    "EXPLORE_PROP": "Explorează proprietăți",
+    "ADD_PROP": "Adaugă Proprietăți",
+    "CHAT": "Conversație",
+    "USER_PROF": "Profil utilizator",
+    "USEFULL_LINKS": {
+      "TITLE": "Linkuri utile",
+      "FAQ": "Întrebări și răspunsuri",
+      "TERMS": "Termeni și condiții",
+      "PRIVACY": "Politica datelor"
+    }
+  },
+
+  "MY_PROPERTIES": {
+    "TITLE_ACTIVE": "Anunțurile mele active",
+    "TITLE_WAITING": "Anunțurile în așteptare",
+    "SUBTITLE_WAITING": "Aici se vor putea găsi anunțurile care sunt în cursul moderării de către un admin",
+    "TITLE_DEACTIVATED": "Anunțuri dezactivate",
+    "TITLE_MODERATED": "Aici vei găsi anunțurile care au fost moderate și nu au fost aprobate",
+    "SUBTITLE_MODERATED": "Editează anunțul pentru a putea rezolva problemele găsite",
+    "MSG_ERROR" : "Eroare!",
+    "PRICE": "Preț",
+    "PRICE_PER": "Preț pe",
+    "PAYMENT": "Tip plată",
+    "DELETE": {
+      "TITLE": "Șterge anunțul",
+      "MSG": "Vrei să ștergi anunțul",
+      "YES": "Da",
+      "NO": "Nu"
+    },
+    "TABS": {
+      "ACTIVE": "Active",
+      "WAITING": "În așteptare",
+      "DEACTIVATED": "Dezactivate",
+      "MODERATED": "Anulate după moderare"
+    },
+    "NO_DATA_TITLE" : "Niciun anunț găsit",
+    "NO_DATA" : "Ups, asta e stânjenitor. Se pare că nu s-au găsit niciun anunț."
+  },
+
+  "FAVORITE_PROPERTIES": {
+    "TITLE": "Proprietăți favorite",
+    "PRICE": "Preț",
+    "PRICE_PER": "Preț pe",
+    "PAYMENT": "Tip plată",
+    "NO_DATA_TITLE" : "Niciun teren gasit",
+    "NO_DATA" : "Ups, asta e stânjenitor. Se pare că nu s-au găsit proprietăți favorite."
+  },
+
+  "ADD_EDIT_PROPERTY" : {
+    "FOR_SALE": "De Vânzare",
+    "FOR_RENT": "De Închiriat",
+    "TITLE_ADD": "Adaugă proprietate",
+    "TITLE_UPDATE": "Modifică proprietatea",
+    "MAIN_INFO": {
+      "SUBTITLE": "Informații principale",
+      "TITLE": {
+        "TITLE": "Titlu",
+        "PLACEHOLDER": "Titlu proprietate"
+      },
+      "PRICE": {
+        "TITLE": "Preț",
+        "PLACEHOLDER": "Preț"
+      },
+      "SURFACE": {
+        "TITLE": "Suprafață",
+        "PLACEHOLDER": "Arie"
+      },
+      "PRICE_PER": {
+        "TITLE": "Preț per",
+        "PLACEHOLDER": "Preț per unitate"
+      },
+      "PAYMENT_TYPE": {
+        "TITLE": "Tip de plată",
+        "PLACEHOLDER": "Selectează tip de plată"
+      },
+      "NEGOTIABLE": "Negociabil",
+      "REASON_CANCEL_TITLE": "Motiv pentru care nu a fost aprobat",
+      "REASON_CANCEL_SUBTITLE": "Modifică anunțul în concordanță cu motivul anulării"
+    },
+    "IMAGE": {
+      "TITLE": "Adaugă imagini și video",
+      "SUBTITLE" : "Prima imagine va fi imaginea principală a anunțului",
+      "ADD" : "Adaugă imagini",
+      "MAKE_PRIMARY": "Setează ca imagine principală",
+      "VIDEO" : {
+        "TITLE" : "Prezentare video",
+        "PLACEHOLDER": "Link către prezentarea video"
+      }
+    },
+    "LOCATION": {
+      "TITLE": "Locație",
+      "COUNTRY": {
+        "TITLE": "Țară",
+        "PLACEHOLDER": "Țară"
+      },
+      "COUNTY": {
+        "TITLE": "Județ",
+        "PLACEHOLDER": "Județ"
+      },
+      "LOCALITY": {
+        "TITLE": "Localitate",
+        "PLACEHOLDER": "Localitate"
+      },
+      "VILLAGE": {
+        "TITLE": "Oraș",
+        "PLACEHOLDER": "Oraș"
+      },
+      "STREET": {
+        "TITLE": "Stradă",
+        "PLACEHOLDER": "Stradă"
+      },
+      "DETAILS": {
+        "TITLE": "Detalii adresă",
+        "PLACEHOLDER": "Detalii adresă (număr, alte detalii)"
+      }
+    },
+    "DETAILS" : {
+      "TITLE": "Detalii anunț",
+      "DESCRIPTION": {
+        "TITLE": "Descriere",
+        "PLACEHOLDER": "Descrierea anunțului"
+      },
+      "TYPE": {
+        "TITLE": "Tip",
+        "PLACEHOLDER": "Tip proprietate",
+        "DATA": {
+          "BUILDING": "pentru construcție",
+          "AGRICULTURAL": "Agricol",
+          "RECREATIONAL": "Recreațional",
+          "COMMERCIAL": "Comercial",
+          "WOOD": "Padure",
+          "MIXT": "Mixt",
+          "OTHER" : "Altele"
+        }
+      },
+      "DIMENSION": {
+        "TITLE": "Dimensiune",
+        "PLACEHOLDER": "Dimensiunea terenului"
+      },
+      "FENCE": {
+        "TITLE": "Gard",
+        "PLACEHOLDER": "Are gard?",
+        "DATA" : {
+          "YES" : "Da",
+          "NO" : "Nu"
+        }
+      },
+      "LOCATION_TYPE": {
+        "TITLE": "Tip locație",
+        "PLACEHOLDER": "Tip locație"
+      }
+    },
+    "FACILITIES": {
+      "TITLE": "Facilități",
+      "ELECTRICITY" : "electricitate",
+      "WATER" : "apa",
+      "GAS" : "gaz",
+      "TELEPHONE" : "telefon",
+      "DRAINAGE" : "drenaj",
+      "SEPTIC_TANK" : "fosă septică"
+    },
+    "ACCESS": {
+      "TITLE": "Tip acces",
+      "UNPAVED" : "nepavat",
+      "PAVED" : "pavat",
+      "ASPHALTED" : "asfaltat"
+    },
+    "SURROUNDING": {
+      "TITLE": "Împrejurimi",
+      "FOREST" : "padure",
+      "LAKE" : "lac",
+      "OPEN" : "câmp deschis",
+      "MOUNTAIN" : "munte",
+      "SEA" : "mare"
+    },
+    "VIEW": {
+      "TITLE": "Remote viewing",
+      "SUBTITLE": "I use application for remote viewing",
+      "REMOTE": {
+        "TITLE" : "Remote view",
+        "PLACEHOLDER" : "Alege",
+        "YES" : "Da",
+        "NO" : "Nu"
+      }
+    },
+    "CONTACT" : {
+      "TITLE" : "Contact",
+      "PERSON" : {
+        "TITLE" : "Persoana de contact",
+        "PLACEHOLDER" : "Numele persoanei care administrează anunțul"
+      },
+      "PHONE" : {
+        "TITLE" : "Telefon",
+        "PLACEHOLDER" : "Număr telefon"
+      }
+    },
+    "ADD_BUTTON" : "Adaugă proprietate",
+    "UPDATE_BUTTON" : "Modifică proprietate",
+    "MSG_ERR": {
+      "COUNTRIES": "Eroare la preluarea țărilor!",
+      "COUNTIES": "Eroare la preluarea județelor!",
+      "LOCALITY": "Eroare la preluarea localităților!",
+      "VILLAGE" : "Eroare la preluarea comunelor!",
+      "TITLE": "Titlul acestui anunț este obligatoriu!",
+      "DESCRIPTION": "Descriere acestui anunț este obligatoriu!",
+      "CONTACT_NAME": "Numele persoanei de contact al acestui anunț este obligatoriu!",
+      "PHONE" : "Numărul de telefon al acestui anunț este obligatoriu!",
+      "PHONE_DIGIT" : "Numărul de telefon trebuie să conțină doar cifre",
+      "PRICE" : "Prețul acestui anunț este obligatoriu!",
+      "PRICE_DIGIT": "Prețul trebuie să conțină doar cifre!",
+      "AREA" : "Suprafața acestui anunț este obligatoriu!",
+      "AREA_DIGIT" : "Suprafața trebuie să conțină doar cifre!",
+      "CURRENCY" : "Moneda acestui anunț este obligatoriu!",
+      "VAL_COUNTRY" : "Țara acestui anunț este obligatoriu!",
+      "VAL_COUNTY" : "Județul acestui anunț este obligatoriu!",
+      "VAL_LOCALITY" : "Localitatea acestui anunț este obligatoriu!",
+      "VAL_VILLAGE" : "Comuna acestui anunț este obligatoriu!",
+      "VAL_STREET" : "Strada acestui anunț este obligatoriu!",
+      "VAL_DETAILS" : "Detaliile adresei acestui anunț este obligatoriu!",
+      "VAL_FILES" : "Trebuie să încărcați cel puțin o imagine pentru anunț!",
+      "MODAL_TITLE_SAVE" : "Creare anunț",
+      "MODAL_CONTENT_SAVE" : "Vrei să creezi anunțul",
+      "MODAL_YES" : "Da",
+      "MODAL_NO" : "Nu",
+      "MODAL_DISMISS" : "Anunțul nu a fost creat!",
+      "SAVE_SUCCESS": "Anunțul a fost creat cu succes!",
+      "SAVE_ERROR": "Eroare la crearea anunțului!",
+      "ERR_LOAD_DATA_EDIT" : "Error la preluarea datelor din anunț",
+      "MODAL_TITLE_UPDATE" : "Modificare Anunț",
+      "MODAL_CONTENT_UPDATE" : "Vrei să modifici acest anunț",
+      "MODAL_UPDATE_DISMISS" : "Anunțul a fost modificat",
+      "SAVE_UPDATE_SUCCESS": "Anunțul a fost modificat cu succes!",
+      "SAVE_UPDATE_ERROR": "Eroare la modificarea anunțului!"
+    },
+    "UPLOADING_FILES": "Încărcare fișiere pe server..",
+    "FINISH_UPLOADING_FILES": "Încărcare fișiere terminată cu success"
+  },
+
+  "LOGIN" : {
+    "TITLE": "Autentificare",
+    "EMAIL": {
+      "TITLE": "Adresa de email",
+      "PLACEHOLDER": "nume@exemplu.com",
+      "REQUIRED" : "Email-ul este obligatoriu",
+      "INCCORECT" : "Email-ul este incorect"
+    },
+    "PASSWORD" : {
+      "TITLE": "Parolă",
+      "PLACEHOLDER": "Parolă",
+      "REQUIRED" : "Parola este obligatorie"
+    },
+    "REMEMBER" : "Ține-mă minte",
+    "FORGOT" : "Ai uitat parola?",
+    "BTN_LOGIN" : "Autentificare",
+    "MSG_SIGNUP" : "Nu ai cont ?",
+    "SIGNUP": "Înregistrare"
+  },
+
+  "LOGIN_SERVICE": {
+    "GET_USER_BY_EMAIL": {
+      "NO_USER": "Nu există niciun utilizator cu acest email!",
+      "CHECK": "Eroare la verificare emailului!"
+    },
+    "SEND_EMAIL_RESET_PASS": {
+      "ERR": "Eroare la trimiterea emailului!"
+    },
+    "GET_ID_USER_BY_RESET_TOKEN": {
+      "NO_USER": "Nu există niciun utilizator cu acest token!",
+      "ERR": "Eroare la verificarea emailului!"
+    },
+    "RESET_PASSWORD": {
+      "ERR": "Eroare la schimbarea parolei!"
+    },
+    "GET_ID_USER_BY_VALIDATION_TOKEN": {
+      "NO_USER": "Nu există niciun utilizator cu acest token!",
+      "ERR": "Eroare la verificarea tokenului!"
+    },
+    "SEND_EMAIL_VALIDATION": {
+      "ERR": "Eroare la trimiterea emailului de validare!"
+    },
+    "VALIDATE_EMAIL": {
+      "ERR": "Eroare la validarea emailului!"
+    }
+  },
+
+  "SOCKET_SERVICE": {
+    "HANDLE_PAGE_RELOAD": {
+      "REFRESH": "Aplicația se va actualiza în ",
+      "REFRESH_END": " secunde, vă rugăm să salvați modificările!"
+    }
+  },
+
+  "FORGOT_PASSWORD": {
+    "TITLE": "Resetează parola",
+    "SUBTITLE": "Introdu adresa de email. Vei primi un link pentru noua parolă pe email",
+    "EMAIL" : {
+      "TITLE" : "Adresa de email",
+      "PLACEHOLDER" : "nume@exemplu.com"
+    },
+    "BTN_SEND": "Trimite",
+    "REMEMBER": "Îți amintești parola?",
+    "SIGNIN": "Autentificare",
+    "MSG_ERR": {
+      "EMAIL_ERROR": "Adresa de email este obligatorie",
+      "EMAIL_INCORRECT": "Adresa de email este incorectă",
+      "SAVE_SUCCESS": "Email-ul de resetare a fost trimis cu succes!"
+    }
+  },
+
+  "RESET_PASSWORD": {
+    "TITLE": "Alege o nouă parolă",
+    "PASSWORD" : {
+      "PLACEHOLDER" : "Parolă"
+    },
+    "PASSWORD_CONFIRM" : {
+      "PLACEHOLDER" : "Confirmare parolă"
+    },
+    "BTN_SEND": "Resetare parolă",
+    "MSG_ERR": {
+      "NO_USER_ERROR": "Utilizatorul nu a fost găsit",
+      "PASSWORD_ERROR": "Parola este obligatorie",
+      "PASSWORD_CONFIRM_ERROR": "Confirmarea parolei este obligatorie",
+      "PASSWORD_MATCH_ERROR": "Parolele nu corespund",
+      "VALIDATION_ERROR": "Eroare la validarea formularului",
+      "SAVE_SUCCESS": "Parola a fost resetată cu succes!"
+    }
+  },
+
+  "VALIDATE_EMAIL": {
+    "SUCCESS": {
+      "TITLE": "Succes",
+      "MSG": "Adresa de email a fost validată!",
+      "REDIRECT": "Veți fi redirecționat către pagina principală Landvesto.com"
+    },
+    "ERROR": {
+      "TITLE": "Eroare",
+      "MSG": "A apărut o problemă la validarea adresei de email!",
+      "REDIRECT": "Cauza erorii: "
+    }
+  },
+
+  "SIGNUP" : {
+    "TITLE" : "Înregistrează",
+    "EMAIL" : {
+      "TITLE" : "Adresa de email",
+      "PLACEHOLDER" : "nume@exemplu.com",
+      "REQUIRED" : "Adresa de email este obligatorie",
+      "INCCORECT" : "Email-ul este incorect"
+    },
+    "PASSWORD" : {
+      "TITLE": "Parola",
+      "PLACEHOLDER": "Parola",
+      "REQUIRED" : "Parola este obligatorie"
+    },
+    "PASSWORD_CONFIRM" : {
+      "TITLE": "Confirmare parolă",
+      "PLACEHOLDER": "Confirmare parolă",
+      "REQUIRED" : "Confirmarea parolei este obligatorie",
+      "MATCH": "Parolele trebuie să fie identice"
+    },
+    "ACCEPT" : {
+      "TITLE" : "Accept termenii și condițile",
+      "REQUIRED" : "Trebuie să accepți termenii și condițiile"
+    },
+    "BTN" : "Înregistrare",
+    "MSG_HAVE" : "Ai deja un cont?",
+    "SIGNIN" : "Autentificare"
+  },
+
+  "CHAT" : {
+    "TITLE" : "Conversație",
+    "BTN_BUY" : "Cumpără",
+    "BTN_SELL" : "Vinte",
+    "DELETE" : "Șterge",
+    "ENTER_MESSAGE" : "Scrie mesajul...",
+    "MSG_ERR": "Eroare"
+  },
+
+  "PROFILE_SETTING" : {
+    "BTN_MY" : "Proprietățile mele",
+    "BTN_FAV" : "Proprietăți favorite",
+    "TITLE": "Date personale",
+    "FIRST_NAME" : {
+      "TITLE" : "Nume",
+      "PLACEHOLDER" : "Nume"
+    },
+    "LAST_NAME" : {
+      "TITLE" : "Prenume",
+      "PLACEHOLDER" : "Prenume"
+    },
+    "EMAIL" : {
+      "TITLE" : "Email - ul tău",
+      "PLACEHOLDER" : "name@exemple.com"
+    },
+    "WEBSITE" : {
+      "TITLE" : "Site",
+      "PLACEHOLDER" : "Url"
+    },
+    "PHONE" : {
+      "TITLE" : "Nr. telefon",
+      "PLACEHOLDER" : "Nr. telefon"
+    },
+    "DESCRIPTION" : {
+      "TITLE" : "Descriere",
+      "PLACEHOLDER" : "Descriere"
+    },
+    "BTN_SAVE" : "Salvează modificările",
+    "PASSWORD": {
+      "TITLE": "Schimbă parola",
+      "OLD" : {
+        "TITLE" : "Parolă veche",
+        "PLACEHOLDER" : "Parolă veche"
+      },
+      "NEW" : {
+        "TITLE" : "Parolă nouă",
+        "PLACEHOLDER" : "Parolă nouă"
+      },
+      "RETYPE" : {
+        "TITLE" : "Rescrie noua parolă",
+        "PLACEHOLDER" : "Rescrie noua parolă"
+      },
+      "BTN_SAVE" : "Salvează parola"
+    },
+    "DELETE" : {
+      "TITLE" : "Șterge contul",
+      "SUBTITLE" : "Vrei să ștergi acest cont? Apasă pe butonul 'Șterge'",
+      "BTN" : "Șterge"
+    },
+    "VALIDATE_EMAIL" : {
+      "TITLE" : "Validare adresă de email",
+      "SUBTITLE" : "Vă rugăm să vă actualizați adresa de email pentru a putea accesa toate funcționalitățile platformei!",
+      "BTN" : "Validare",
+      "MSG_SUCCESS": "Email-ul a fost trimis cu succes! Vă rugăm să vă verificați inbox-ul și să urmăriți link-ul din mesajul primit pentru a finaliza procesul de validare."
+    },
+    "MSG_ERR": {
+      "ERR": "Eroare",
+      "SUCCESS": "Succes",
+      "FIRST_NAME": "Completează numele!",
+      "LAST_NAME": "Completează prenumele!",
+      "EMAIL": "completează email - ul!",
+      "OLD": "Vechea parolă este obligatorie!",
+      "NEW": "Parola este obligatorie!",
+      "NEW_OLD": "Noua parola trebuie să fie diferită de vechea parolă!",
+      "RETYPE": "Parola rescrisă nu este aceeasi cu noua parolă!",
+      "OLD_MATCH": "Vechea parolă nu este aceeași!",
+      "ERR_PASS": "Eroare la resetarea parolei!",
+      "SUCCES_PASS": "Parola a fost resetată cu succes!"
+    },
+    "MODAL_DELETE": {
+      "TITLE" : "Confirmare ștergere cont",
+      "SUBTITLE": "Vrei să ștergi contul?",
+      "MSG_SUCCESS": "Contul a fost șters cu succes!",
+      "YES": "Da",
+      "NO": "Nu"
+    },
+    "IMAGE": {
+      "ERROR": "Eroare la setarea pozei de profil!",
+      "SUCCESS": "Poza de profil a fost resetată cu succes!"
+    }
+  },
+
+  "PROPERTY_DETAIL" : {
+    "YES" : "Da",
+    "NO" : "Nu",
+    "NO_INFORMATION" : "Nicio informație",
+    "ERROR" : "Eroare",
+    "ERR_MSG" : "Eroare la preluarea detaliilor anunțului!",
+    "LAND_TYPE" : "Tip teren",
+    "SURFACE": "Suprafață",
+    "DIMENSION" : "Dimensiuni",
+    "FENCE" : "Gard",
+    "ACCESS" : "Acces",
+    "SURROUNDING" : "Împrejurimi",
+    "FACILITY": "Facilități",
+    "SELLER" : "Tip vânzător",
+    "HISTORY" : {
+      "TITLE": "Istoric și statistici",
+      "DATE" : "Dată",
+      "MODIFICATION" : "Modificare",
+      "PRICE" : "Preț",
+      "VIEWS": "Vizualizări",
+      "SAVES" : "Salvări",
+      "ADD" : "Anunțul a fost adăugat.",
+      "EDIT" : "Anunțul a fost modificat."
+    },
+    "PRICE" : {
+      "TITLE" : "Preț",
+      "SELL" : "Pentru vânzare",
+      "RENT" : "Pentru închiriere",
+      "DAYSON" : "Zile pe LANDVESTO",
+      "DAYS" : "Zile",
+      "PRICE_PER" : "Preț per",
+      "PAYMENT" : "Tip plată",
+      "SURFACE" : "Suprafață",
+      "BTN" : "Trimite mesaj"
+    },
+    "ABOUT_SELLER" : "Despre vânzător",
+    "SHOW_NR" : "Afișează numărul",
+    "HAVE_QUE": "Întrebări? Scrie-ne!",
+    "BTN_CONTACT" : "Contactează-ne"
+  },
+
+  "DRAFTS": {
+    "PAYMENT_TYPES": {
+      "MONTHLY": "Pe lună",
+      "YEARLY": "Pe an",
+      "QUARTER": "La trimestru",
+      "SEMESTER": "La semestru",
+      "ONE_TYPE": "Plată unică"
+    },
+    "LANDS_TYPES" : {
+      "BUILDING" : "pentru construcție",
+      "AGRICULTURAL" : "Agricol",
+      "RECREATIONAL" : "Recreațional",
+      "COMMERCIAL" : "Comercial",
+      "WOOD" : "Padure",
+      "MIXT" : "Mixt",
+      "OTHER" : "Altele"
+    },
+    "ACCESS_TYPES" : {
+      "UNPAVED" : "nepavat",
+      "PAVED" : "pavat",
+      "ASPHALTED" : "asfaltat"
+    },
+    "SURROUNDING_TYPES" : {
+      "FOREST" : "padure",
+      "LAKE" : "lac",
+      "OPEN_FIELD" : "câmp deschis",
+      "MOUNTAIN" : "munte",
+      "SEA" : "mare"
+    },
+    "MEDIA_TYPES" : {
+      "ELECTRICITY" : "electricitate",
+      "WATER" : "apa",
+      "GAS" : "gaz",
+      "TELEPHONE" : "telefon",
+      "DRAINAGE" : "drenaj",
+      "SEPTIC_TANK" : "fosă septică"
+    },
+    "SELLER_TYPES" : {
+      "OWNER": "Proprietar",
+      "AGENT": "Agent"
+    }
+  },
+
+  "FAQS": {
+    "TITLE": "Întrebări puse frecvent",
+    "BUY": {
+      "1": {
+        "QUESTION": "Cum funcționează procesul de achiziție a terenului?",
+        "ANSWER": "După alegerea proprietății, semnați un contract de rezervare, plătiți un avans și realizați verificarea legală cu ajutorul nostru. Plata integrală și transferul de proprietate se fac prin notar."
+      },
+      "2": {
+        "QUESTION": "Pot cetățenii străini să cumpere teren în această țară?",
+        "ANSWER": "Da, cetățenii străini pot cumpăra legal teren, în anumite condiții. Echipa noastră juridică vă va ghida în fiecare etapă."
+      },
+      "3": {
+        "QUESTION": "Există taxe suplimentare în afară de prețul terenului?",
+        "ANSWER": "Da, sunt taxe legale, notariale, de înregistrare și administrative. Oferim o estimare completă înainte de a lua o decizie."
+      },
+      "4": {
+        "QUESTION": "Pot cumpăra teren de la distanță?",
+        "ANSWER": "Da, oferim servicii complete la distanță, inclusiv tururi video, gestionarea documentelor și semnarea prin procură."
+      }
+    },
+    "GENERAL": {
+      "1": {
+        "QUESTION": "Ce este Landvesto și cum mă ajută?",
+        "ANSWER": "Landvesto este o platformă digitală care conectează cumpărători și vânzători de terenuri. Simplifică procesul prin anunțuri verificate, asistență juridică și suport personalizat."
+      },
+      "2": {
+        "QUESTION": "Am nevoie de un designer sau arhitect pentru a folosi Landvesto?",
+        "ANSWER": "Nu, Landvesto este destinat vânzării de terenuri. Dacă doriți să construiți, vă putem recomanda arhitecți autorizați după achiziție."
+      },
+      "3": {
+        "QUESTION": "Ce tipuri de teren sunt disponibile?",
+        "ANSWER": "Oferim terenuri agricole, rezidențiale și comerciale în zone urbane și rurale, toate cu documente legale clare."
+      },
+      "4": {
+        "QUESTION": "Pot primi ajutor pentru finanțare?",
+        "ANSWER": "Da, colaborăm cu instituții financiare și vă putem pune în legătură cu opțiuni de credit ipotecar sau investiții."
+      }
+    },
+    "SUPPORT": {
+      "1": {
+        "QUESTION": "Cum pot contacta serviciul de asistență clienți?",
+        "ANSWER": "Ne puteți contacta prin chat live, e-mail sau telefon. Suntem disponibili 7 zile pe săptămână."
+      },
+      "2": {
+        "QUESTION": "Ce trebuie să fac dacă am probleme tehnice?",
+        "ANSWER": "Vă rugăm să raportați problemele tehnice prin secțiunea de suport. Echipa noastră va răspunde prompt."
+      },
+      "3": {
+        "QUESTION": "Cum îmi pot actualiza informațiile personale?",
+        "ANSWER": "Autentificați-vă în cont, accesați setările profilului și faceți modificările necesare. Contactați-ne dacă aveți nevoie de ajutor."
+      },
+      "4": {
+        "QUESTION": "Există asistență pentru cei care nu vorbesc limba engleză?",
+        "ANSWER": "Da, echipa noastră vorbește mai multe limbi și oferim documente traduse la cerere."
+      }
+    },
+    "CONTACT": {
+      "TITLE": "Aveți o întrebare ? Haideți să ne auzim!",
+      "SUBTITLE": "O platformă excelentă pentru a cumpăra, vinde și închiria proprietăți fără niciun agent sau comisioane.",
+      "BUTTON": "Contactaţi-ne"
+    }
+  },
+
+  "PRIVACY": {
+    "TITLE": "Politica de Confidențialitate",
+    "EFFECTIVE_DATE": "Data intrării în vigoare: 01.08.2025",
+    "INTRO": "Ne angajăm să vă protejăm confidențialitatea și să asigurăm că datele dvs. personale sunt gestionate în siguranță și cu responsabilitate.",
+    "INFORMATION": "1. Informațiile pe care le colectăm",
+    "INFORMATION_TEXT": "Colectăm următoarele tipuri de informații:\n\na. Informații personale - Nume, adresă de email, număr de telefon, naționalitate, documente de identificare (opțional), detalii de plată (limitat).\n\nb. Informații despre terenuri - Descrieri ale proprietăților, locații, documente, fotografii și prețuri.\n\nc. Date de utilizare - IP, browser, activitate în sesiune.\n\nd. Date de comunicare - Mesaje și solicitări.",
+    "USAGE": "2. Cum folosim informațiile dvs.",
+    "USAGE_TEXT": "Pentru a furniza și administra platforma, permite comunicarea, procesa comisioane, verifica anunțuri, îmbunătăți serviciile și respecta legile.",
+    "LEGAL_BASIS": "3. Baza legală pentru prelucrare (utilizatori UE/SEE)",
+    "LEGAL_BASIS_TEXT": "Datele sunt prelucrate pe baza consimțământului, executării contractului, obligațiilor legale sau interesului legitim.",
+    "SHARING": "4. Partajarea informațiilor dvs.",
+    "SHARING_TEXT": "Putem partaja date cu procesatori de plăți, furnizori legali, instrumente terțe și autorități, dacă este necesar prin lege.",
+    "RETENTION": "5. Păstrarea datelor",
+    "RETENTION_TEXT": "Păstrăm datele atât timp cât este necesar pentru furnizarea serviciilor, conformarea legală, soluționarea disputelor și gestionarea contului.",
+    "SECURITY": "6. Securitate",
+    "SECURITY_TEXT": "Folosim măsuri adecvate pentru protejarea datelor dvs., însă nicio transmisie pe internet nu este 100% sigură.",
+    "INTERNATIONAL": "7. Transferuri internaționale de date",
+    "INTERNATIONAL_TEXT": "Datele dvs. pot fi procesate în alte țări. Aplicăm măsuri de protecție pentru aceste transferuri.",
+    "RIGHTS": "8. Drepturile dvs.",
+    "RIGHTS_TEXT": "Aveți dreptul de a accesa, corecta, șterge, restricționa prelucrarea, retrage consimțământul și depune plângeri.",
+    "COOKIES": "9. Cookie-uri",
+    "COOKIES_TEXT": "Folosim cookie-uri pentru a stoca preferințe, urmări utilizarea și activa funcționalități. Puteți controla cookie-urile prin setările browserului.",
+    "CHILDREN": "10. Confidențialitatea copiilor",
+    "CHILDREN_TEXT": "Serviciile noastre nu sunt destinate utilizatorilor sub 18 ani. Nu colectăm intenționat date de la minori.",
+    "CHANGES": "11. Modificări ale acestei politici",
+    "CHANGES_TEXT": "Putem actualiza această politică periodic. Actualizările vor apărea aici cu o nouă dată de intrare în vigoare.",
+    "CONTACT": "12. Contactați-ne",
+    "CONTACT_TEXT": "Pentru întrebări, ne puteți contacta la contact@landvesto.com.",
+    "PRINT": "Printare"
+  },
+
+  "TERMS": {
+    "TITLE": "Termeni și Condiții",
+    "EFFECTIVE_DATE": "Data intrării în vigoare: 01.08.2025",
+    "INTRO": "Bun venit pe Landvesto, o platformă care conectează vânzătorii de terenuri cu cumpărători din întreaga lume. Acești Termeni și Condiții ('Termeni') reglementează utilizarea site-ului, aplicației mobile și serviciilor noastre.\nPrin utilizarea platformei, confirmați că ați citit, înțeles și acceptat acești Termeni.",
+
+    "ACCOUNTS": "1. Înregistrarea contului și eligibilitate",
+    "ACCOUNTS_TEXT": "Trebuie să aveți cel puțin 18 ani pentru a crea un cont.\nSunteți de acord să furnizați informații corecte, actualizate și complete la înregistrare.\nSunteți responsabil pentru păstrarea confidențialității datelor de conectare și pentru toate activitățile efectuate prin contul dvs.\nTrebuie să ne informați imediat în cazul unei utilizări neautorizate.",
+
+    "SERVICES": "2. Domeniul serviciilor",
+    "SERVICES_TEXT": "Landvesto oferă o platformă digitală unde proprietarii pot lista terenuri de vânzare, iar cumpărătorii pot naviga și contacta vânzătorii.\nNu acționăm ca agenți imobiliari sau intermediari legali. Landvesto nu participă la transferul efectiv al proprietății.\nOrice vânzare de teren este un acord privat între părți, de obicei asistat de notari sau avocați.",
+
+    "FEES": "3. Comision și condiții de plată",
+    "FEES_TEXT": "Utilizarea platformei este gratuită pentru cumpărători.\nVânzătorii sunt de acord să plătească un comision de 3% din prețul final al vânzării.\nComisionul este plătibil după încheierea tranzacției. Neplata poate duce la suspendarea contului, acțiuni legale sau restricționarea anunțurilor.\nPutem trimite facturi și notificări electronic.",
+
+    "USER_OBLIGATIONS": "4. Obligațiile utilizatorilor",
+    "USER_OBLIGATIONS_TEXT": "Utilizatorii se obligă să nu:\n- Publice anunțuri false, înșelătoare sau frauduloase\n- Încarce conținut ilegal sau care încalcă drepturi de autor\n- Hărțuiască sau abuzeze alți utilizatori\n- Utilizeze platforma în scopuri comerciale neautorizate\n\nLandvesto își rezervă dreptul de a elimina conținutul și de a suspenda accesul fără notificare prealabilă.",
+
+    "LISTINGS": "5. Anunțuri și verificarea terenurilor",
+    "LISTINGS_TEXT": "Vânzătorii trebuie să furnizeze informații reale și corecte despre terenurile listate, inclusiv acte de proprietate, locație, preț și statut juridic.\nOferim opțional servicii de verificare, dar nu garantăm acuratețea anunțurilor.\nLandvesto nu este responsabil pentru verificarea actelor de proprietate sau a granițelor terenurilor.",
+
+    "INTELLECTUAL": "6. Drepturi de proprietate intelectuală",
+    "INTELLECTUAL_TEXT": "Tot conținutul platformei (texte, imagini, logo-uri, software) este proprietatea Landvesto sau a partenerilor săi.\nEste interzisă reproducerea, distribuirea sau crearea de lucrări derivate fără permisiunea scrisă.\nConținutul trimis de utilizatori rămâne în proprietatea lor, dar oferă Landvesto o licență neexclusivă pentru utilizare și promovare.",
+
+    "TERMINATION": "7. Suspendarea și închiderea contului",
+    "TERMINATION_TEXT": "Putem suspenda sau închide contul dvs. dacă încălcați acești Termeni sau utilizați greșit platforma.\nVă puteți șterge contul în orice moment prin contactarea echipei noastre.\nOrice obligație de plată a comisionului rămâne valabilă și după închiderea contului.",
+
+    "LIABILITY": "8. Limitarea răspunderii",
+    "LIABILITY_TEXT": "Landvesto nu este responsabil pentru:\n- Pierderi rezultate din tranzacțiile dintre utilizatori\n- Inexactități în anunțuri\n- Dispute legale între părți\n- Erori tehnice, întreruperi sau acces neautorizat\nUtilizați platforma pe propriul risc. Serviciul este furnizat 'ca atare', fără garanții.",
+
+    "PRIVACY": "9. Confidențialitate și protecția datelor",
+    "PRIVACY_TEXT": "Politica noastră de confidențialitate explică modul în care colectăm, folosim și protejăm datele personale.\nPrin utilizarea platformei, sunteți de acord cu practicile noastre.\nDepunem eforturi rezonabile pentru protejarea datelor, dar nu există sisteme perfect sigure.",
+
+    "CHANGES": "10. Modificări ale Termenilor",
+    "CHANGES_TEXT": "Putem actualiza acești Termeni periodic. Orice modificare va fi afișată pe această pagină cu o nouă dată de intrare în vigoare.\nContinuarea utilizării platformei constituie acceptul dvs. al Termenilor actualizați.",
+
+    "CONTACT": "11. Contact",
+    "CONTACT_TEXT": "Pentru întrebări sau nelămuriri privind acești Termeni, ne puteți contacta la: contact@landvesto.com"
+  },
+
+  "GDPR": {
+    "TITLE": "Confirmare prelucrare date cu caracter personal",
+    "LINE_1": "Vă informăm că, începând cu data de 25 mai 2018, sunt aplicabile prevederile Regulamentului (UE) nr. 679/2016 al Parlamentului European și al Consiliului, privind protecția persoanelor fizice în ceea ce privește prelucrarea datelor cu caracter personal și libera circulație a acestor date, precum și abrogarea Directivei 95/46/CE (Regulamentul general privind protecția datelor).",
+    "LINE_2": "Conform prevederilor Regulamentului general privind protecția datelor, trebuie să vă exprimați consimțământul cu privire la prelucrarea datelor dumneavoastră cu caracter personal furnizate în scopul accesării sau furnizării serviciilor oferite de SC TULOCO SRL prin intermediul platformei Landvesto.",
+    "LINE_3": "SCOPUL prelucrării datelor cu caracter personal rezultă din contractul de servicii încheiat și, prin urmare, datele vor fi prelucrate exclusiv în scopuri contractuale și legale. Prelucrarea datelor facilitează desfășurarea activităților legate de contract și/sau de îndeplinirea obligațiilor legale.",
+    "LINE_4": "DREPTURILE oferite de noul regulament sunt următoarele:",
+    "LINE_5": "1. Dreptul de acces reprezintă dreptul de a obține din partea noastră o confirmare că prelucrăm sau nu datele dumneavoastră, iar dacă da, să aveți acces la acestea și la informațiile despre modul de prelucrare.",
+    "LINE_6": "2. Dreptul la portabilitatea datelor presupune că puteți primi datele dumneavoastră personale într-un format structurat, utilizat în mod curent și care poate fi citit automat, precum și dreptul de a transmite aceste date către un alt operator.",
+    "LINE_7": "3. Dreptul la opoziție vizează dreptul de a vă opune prelucrării datelor cu caracter personal atunci când aceasta are la bază un interes public sau legitim.",
+    "LINE_8": "4. Dreptul la rectificare se referă la corectarea fără întârzieri nejustificate a datelor cu caracter personal inexacte.",
+    "LINE_9": "5. Dreptul la ștergere / dreptul de a fi uitat reprezintă dreptul de a vi se șterge datele colectate, fără întârzieri nejustificate, în oricare dintre următoarele cazuri: datele nu mai sunt necesare scopurilor pentru care au fost colectate, v-ați retras consimțământul și nu există alt temei juridic pentru prelucrare, vă opuneți prelucrării, datele trebuie șterse pentru respectarea unei obligații legale etc.",
+    "LINE_10": "6. Dreptul la restricționarea prelucrării este dreptul de a obține din partea operatorului restricționarea prelucrării datelor dumneavoastră.",
+    "LINE_11": "Refuzul de a vă da consimțământul pentru prelucrarea datelor cu caracter personal conduce la imposibilitatea de a beneficia de serviciile oferite prin intermediul platformei Landvesto (inclusiv a serviciilor furnizate pe bază de abonament).",
+    "LINE_12": "Cu stimă,",
+    "LINE_13": "Echipa TULOCO",
+    "CONFIRM": "Confirmare",
+    "LATER": "Mai tărziu"
+  },
+
+  "TOPBAR" : {
+    "PROFILE" : "Profil",
+    "CHAT" : "Conversație",
+    "LOGOUT": "Deconectare"
+  },
+
+  "FOOTER" : {
+    "SUBSCRIBE": {
+      "TITLE": "Abonează-te la newsletter!",
+      "CONTENT": "Abonează-te pentru a primi cele mai recente actualizări și informații",
+      "EMAIL" : "Introdu email-ul",
+      "BTN": "Abonează-te"
+    },
+    "CONTENT": "O platformă excelentă pentru a cumpăra și închiria terenuri fără agenți și fără comisioane",
+    "COMPANY" : "Companie",
+    "PROFILE": "Profil utilizator",
+    "POPERTIES": "Proprietățile mele",
+    "MESSAGES": "Mesaje",
+    "LOGIN": "Autentificare",
+    "SIGNUP": "Înregistrare",
+    "LINKS": "Link-uri utile",
+    "TERMS": "Termeni și condiții",
+    "POLICY": "Politica datelor",
+    "FAQ": "Întrebări și răspunsuri",
+    "CONTACT": "Contact",
+    "CONTACT_DETAILS": "Detalii Contact"
+  },
+
+  "GET_IN_TOUCH": {
+    "TITLE" : "Ai o întrebare? Ia legătura cu noi!",
+    "SUBTITLE": "Platforma ideală pentru a cumpăra, vinde sau închiria terenuri, fără agenți și fără comisioane.",
+    "BTN": "Contactează-ne"
+  },
+
+  "REJECTED_DIALOG": {
+    "TITLE" : "Respinge aprobarea anunțului",
+    "REASON": "Motiv",
+    "REASON_PLACEHOLDER": "Motivul respingerii anunțului este obligatoriu",
+    "CONFIRM_BTN": "Confirmă respingerea",
+    "EXIT_BTN": "Exit",
+    "MSG_ERR": "Motivul respingerii este obligatoriu"
+  },
+
+  "AWAITING_APPROVAL": {
+    "TITLE": "Anunțuri în așteptarea aprobării",
+    "PRICE": "Preț",
+    "PRICE_PER": "Preț pe",
+    "PAYMENT": "Tip de plată",
+    "APPROVE": "Aprobă",
+    "REJECT": "Respinge",
+    "NO_DATA_TITLE": "Niciun anunț găsit",
+    "NO_DATA": "Se pare că nu au fost găsite anunțuri în așteptarea aprobării.",
+    "MSG_ERROR": "Eroare!",
+    "APPROVE_TITLE": "Aprobă anunțul",
+    "APPROVE_MODAL_TITLE": "Doriți să aprobați anunțul cu titlul",
+    "YES": "Da",
+    "NO": "Nu",
+    "APPROVE_SUCCESS": "Anunțul a fost aprobat cu succes",
+    "APPROVE_ERROR": "A apărut o problemă la aprobarea anunțului",
+    "REJECT_SUCCESS": "Anunțul a fost respins",
+    "REJECT_ERROR": "A apărut o problemă la respingerea anunțului"
+  },
+
+  "ADMIN_SIDEBAR" : {
+    "DASHBOARD": "Dashboard",
+    "AWAITING_APPROVAL" : "Anunțuri în așteptarea aprobării",
+    "ADD_BLOG_POST" : "Adaugă un nou articol",
+    "ERROR" : "Erori"
+  },
+
+  "ADMIN_ERRORS" : {
+    "TITLE" : "Erori",
+    "MSG_ERR" : "Eroare!",
+    "NUMBER" : "Nr. Crt.",
+    "ID_USER" : "Id utilizator",
+    "EMAIL" : "Email",
+    "ACTION" : "Acțiune",
+    "ERROR" : "Eroare",
+    "DATE" : "Dată - oră",
+    "DETAIL" : "Detalii",
+    "NO_DATA" : "Date indisponibile!",
+    "VIEW_ERR_TITLE" : "Detalii eroare",
+    "CLOSE" : "Închide",
+    "MODAL_DELETE" : {
+      "TITLE" : "Ștergere eroare",
+      "SUBTITLE" : "Vrei să ștergi eroarea?",
+      "YES" : "Da",
+      "NO" : "Nu",
+      "MSG_SUCCESS" : "Eroare ștearsă cu succes",
+      "MSG_ERR" : "Eroare la ștergere"
+    }
+  }
+}

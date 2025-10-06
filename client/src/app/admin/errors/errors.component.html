@@ -1,0 +1,51 @@
+<div class="page-wrapper toggled" [ngClass]="{ 'toggled': activeSidebar }">
+    <app-admin-sidebar/>
+
+    <main class="page-content bg-gray-50 dark:bg-slate-800">
+        <app-admin-topbar (toggleClass)="toggleClass()"/>
+
+        <div class="container-fluid relative px-3">
+            <div class="layout-specing">
+                <div class="p-6 relative rounded-md shadow dark:shadow-gray-700 bg-white dark:bg-slate-900">
+                    <h5 class="text-xl font-semibold mb-4">{{'ADMIN_ERRORS.TITLE' | translate }} :</h5>
+
+                    <div class="overflow-x-auto max-h-[400px] overflow-y-auto">
+                        <table class="w-full border border-gray-300 dark:border-gray-700 border-collapse text-sm border-collapse">
+                            <thead class="bg-gray-100 dark:bg-slate-800">
+                                <tr>
+                                    <th class="w-20 text-center sticky top-0 bg-gray-100 dark:bg-slate-800 z-10">{{'ADMIN_ERRORS.NUMBER' | translate }}</th>
+                                    <th class="w-16 text-center sticky top-0 bg-gray-100 dark:bg-slate-800 z-10">{{'ADMIN_ERRORS.ID_USER' | translate }}</th>
+                                    <th class="w-48 sticky top-0 bg-gray-100 dark:bg-slate-800 z-10">{{'ADMIN_ERRORS.EMAIL' | translate }}</th>
+                                    <th class="w-48 sticky top-0 bg-gray-100 dark:bg-slate-800 z-10">{{'ADMIN_ERRORS.ACTION' | translate }}</th>
+                                    <th class="sticky top-0 bg-gray-100 dark:bg-slate-800 z-10">{{'ADMIN_ERRORS.ERROR' | translate }}</th>
+                                    <th class="w-40 text-center sticky top-0 bg-gray-100 dark:bg-slate-800 z-10">{{'ADMIN_ERRORS.DATE' | translate }}</th>
+                                    <th class="w-10 text-center sticky top-0 bg-gray-100 dark:bg-slate-800 z-10"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let d of errors.slice(0, 100); let i = index" (click)="viewError(d)" class="hover:bg-gray-50 dark:hover:bg-slate-800 cursor-pointer">
+                                    <td class="text-center">{{ i + 1 }}</td>
+                                    <td class="text-center">{{ d.id_user }}</td>
+                                    <td class="">{{ d.email }}</td>
+                                    <td class="">{{ d.action }}</td>
+                                    <td class="">{{ d.error }}</td>
+                                    <td class="text-center">{{ d.createdAt | date: 'dd.MM.yyyy - HH.mm' }}</td>
+                                    <td class="text-center">
+                                        <button mat-icon-button class="remove-btn bg-red-600 text-white p-1 rounded-lg" (click)="remove(d)">
+                                            <i class="mdi mdi-delete"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr *ngIf="!errors.length" class="text-center font-bold">
+                                    <td colspan="6" class="border border-gray-300 dark:border-gray-700 px-2 py-2">{{'ADMIN_ERRORS.NO_DATA' | translate }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-admin-footer/>
+    </main>
+</div>

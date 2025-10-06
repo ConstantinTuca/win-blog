@@ -1,0 +1,9 @@
+$color-error: #f44336;
+
+.text-danger {
+    color: $color-error;
+}
+
+.border-error {
+    border: 1px solid $color-error !important;
+}

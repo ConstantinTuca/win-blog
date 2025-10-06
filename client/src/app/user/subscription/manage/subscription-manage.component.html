@@ -1,0 +1,140 @@
+<div class="page-wrapper toggled" [ngClass]="{ 'toggled': activeSidebar }">
+   <app-sidebar/>
+
+    <main class="page-content bg-gray-50 dark:bg-slate-800">
+        <app-topbar (toggleClass)="toggleClass()"/>
+
+        <div class="container-fluid relative px-3">
+            <div class="layout-specing">
+                <div class="max-w-4xl mx-auto mt-8 px-4 sm:px-6 lg:px-8">
+                  <div
+                    class="bg-gradient-to-r from-indigo-300 via-purple-200 to-pink-100 rounded-3xl shadow-xl p-[2px]"
+                  >
+                    <div
+                      class="bg-white/90 backdrop-blur-xl rounded-3xl p-6 sm:p-8 md:p-10 space-y-8"
+                    >
+                      <!-- Header -->
+                      <div class="text-center">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">
+                          Manage Subscription
+                        </h2>
+                        <p class="text-gray-500 mt-2 text-sm sm:text-base">
+                          Update your payment details, cancel your plan, or review billing
+                          history.
+                        </p>
+                      </div>
+
+                      <!-- Subscription Details -->
+                      <div
+                        class="flex flex-col sm:flex-row sm:items-center sm:justify-between bg-gray-50 rounded-2xl p-5 sm:p-6 shadow-inner space-y-4 sm:space-y-0"
+                      >
+                        <div class="flex items-center space-x-4">
+                          <div
+                            class="bg-indigo-600 text-white w-12 h-12 flex items-center justify-center rounded-2xl shadow-md text-lg"
+                          >
+                            💎
+                          </div>
+                          <div>
+                            <h3 class="text-lg sm:text-xl font-semibold">
+                              {{ subscription?.plan }}
+                            </h3>
+                            <p class="text-gray-500 text-sm">
+                              {{ subscription?.price }} {{ subscription?.currency }} / month
+                            </p>
+                          </div>
+                        </div>
+                        <div class="text-left sm:text-right">
+                          <p class="text-xs sm:text-sm text-gray-500">Next Billing</p>
+                          <p class="font-medium text-sm sm:text-base">
+                            {{ subscription?.current_period_end | date: 'longDate' }}
+                          </p>
+                        </div>
+                      </div>
+
+                      <!-- Actions -->
+                      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                        <!-- Update Payment -->
+                        <div
+                          class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-5 sm:p-6 border border-indigo-100 flex flex-col justify-between"
+                        >
+                          <div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                              Update Payment
+                            </h4>
+                            <p class="text-sm text-gray-500 mb-4">
+                              Change your credit card details for future billing.
+                            </p>
+                          </div>
+                          <button
+                            (click)="onUpdatePayment()"
+                            class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-3 rounded-xl shadow hover:opacity-90 transition text-sm sm:text-base"
+                          >
+                            Update Payment
+                          </button>
+                        </div>
+
+                        <!-- Cancel Subscription -->
+                        <div
+                          class="bg-gradient-to-r from-red-50 to-pink-50 rounded-2xl p-5 sm:p-6 border border-red-100 flex flex-col justify-between"
+                        >
+                          <div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                              Cancel Subscription
+                            </h4>
+                            <p class="text-sm text-gray-500 mb-4">
+                              You’ll keep access until the end of your billing cycle.
+                            </p>
+                          </div>
+                          <button
+                            (click)="onCancel()"
+                            class="w-full bg-gradient-to-r from-red-500 to-pink-600 text-white px-5 py-3 rounded-xl shadow hover:opacity-90 transition text-sm sm:text-base"
+                          >
+                            Cancel Subscription
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- Billing History -->
+                      <div class="bg-gray-50 rounded-2xl p-5 sm:p-6 shadow-inner">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-3 sm:mb-4">
+                          Billing History
+                        </h4>
+                        @if(billingHistory?.length) {
+                          <div>
+                            <ul class="divide-y divide-gray-200">
+                              @for(bill of billingHistory; track $index) {
+                                <li class="flex flex-col sm:flex-row sm:items-center sm:justify-between py-3 space-y-2 sm:space-y-0">
+                                  <span class="text-sm sm:text-base">{{
+                                    bill.date | date: 'mediumDate'
+                                  }}</span>
+                                  <span class="font-medium text-sm sm:text-base">
+                                    {{ bill.amount }} {{ bill.currency }}
+                                  </span>
+                                  <span
+                                    class="px-3 py-1 rounded-full text-xs sm:text-sm"
+                                    [ngClass]="{
+                                      'bg-green-100 text-green-700': bill?.status === 'Paid',
+                                      'bg-yellow-100 text-yellow-700': bill?.status === 'Pending',
+                                      'bg-red-100 text-red-700': bill?.status === 'Failed'
+                                    }"
+                                  >
+                                    {{ bill?.status | titlecase }}
+                                  </span>
+                                </li>
+                              }
+                            </ul>
+                          </div>
+                        } @else {
+                          <p class="text-gray-500 text-sm">No billing records found.</p>
+                        }
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+
+       <app-footer/>
+    </main>
+</div>

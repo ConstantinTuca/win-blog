@@ -1,0 +1,119 @@
+<div class="page-wrapper toggled" [ngClass]="{ 'toggled': activeSidebar }">
+    <app-admin-sidebar/>
+
+    <main class="page-content bg-gray-50 dark:bg-slate-800">
+        <app-admin-topbar (toggleClass)="toggleClass()"/>
+
+        <div class="container-fluid relative px-3">
+            <div class="layout-specing">
+                <div class="min-h-screen bg-gray-50 p-8">
+                  <div class="max-w-7xl mx-auto">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-6">Manage Winners</h1>
+
+                    <!-- Filters -->
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
+                      <input
+                        type="text"
+                        placeholder="Search by full name..."
+                        [(ngModel)]="searchTerm"
+                        (input)="filterWinners()"
+                        class="w-full md:w-1/3 px-4 py-2 rounded-xl border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"
+                      />
+
+                      <select
+                        [(ngModel)]="selectedStatus"
+                        (change)="filterWinners()"
+                        class="w-full md:w-1/4 px-4 py-2 rounded-xl border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"
+                      >
+                        <option value="all">All Status</option>
+                        <option value="paid">Paid</option>
+                      </select>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div *ngIf="loading" class="text-center py-10 text-gray-500">
+                      Loading winners...
+                    </div>
+
+                    <!-- Winners Table -->
+                    <div *ngIf="!loading && filteredWinners.length > 0" class="overflow-x-auto bg-white rounded-2xl shadow-sm">
+                      <table class="min-w-full text-left text-sm">
+                        <thead class="bg-gray-100">
+                          <tr>
+                            <th class="px-6 py-4 font-medium text-gray-700">Full name</th>
+                            <th class="px-6 py-4 font-medium text-gray-700">Confesion</th>
+                            <th class="px-6 py-4 font-medium text-gray-700">Paid</th>
+                            <th class="px-6 py-4 font-medium text-gray-700">Publish Date</th>
+                            <th class="px-6 py-4 font-medium text-gray-700">Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let winner of filteredWinners" (dblclick)="editWinner(winner.id)" class="border-t hover:bg-gray-50 cursor-pointer">
+
+                            <!-- Full name -->
+                            <td class="px-6 py-4">
+                              <div class="font-medium text-gray-900">{{ winner.full_name }}</div>
+                            </td>
+
+                            <!-- Confesion -->
+                            <td class="px-6 py-4 text-gray-700">
+                              {{ winner.confesion }}
+                            </td>
+
+                            <!-- Paid -->
+                            <td class="px-6 py-4">
+                              <span
+                                class="px-2 py-1 rounded-full text-xs font-semibold"
+                                [class.bg-green-100]="winner.paid"
+                                [class.text-green-800]="winner.paid"
+                                [class.bg-yellow-100]="!winner.paid"
+                                [class.text-yellow-800]="!winner.paid"
+                              >
+                                {{ winner.paid ? "Yes" : "No" }}
+                              </span>
+                            </td>
+
+                            <!-- Publish Date -->
+                            <td class="px-6 py-4 text-gray-500">
+                              {{ winner.date | date:'mediumDate' }}
+                            </td>
+
+                            <!-- Actions -->
+                            <td class="px-6 py-4 space-x-2">
+                              <button
+                                class="hover:underline"
+                                [class.text-green-600]="!winner.paid"
+                                [class.text-gray-600]="winner.paid"
+                                (click)="changeStatus(winner)"
+                              >
+                                {{!winner.paid ? "Change paid" : "Make unpaid"}}
+                              </button>
+                              <button
+                                class="text-blue-600 hover:underline"
+                                (click)="editWinner(winner.id)"
+                              >
+                                Edit
+                              </button>
+                              <button
+                                class="text-red-600 hover:underline"
+                                (click)="deleteWinner(winner.id)"
+                              >
+                                Delete
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- Empty State -->
+                    <div *ngIf="!loading && filteredWinners.length === 0" class="text-center py-10 text-gray-500">
+                      No winners found.
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <app-admin-footer/>
+    </main>
+</div>

@@ -1,0 +1,62 @@
+<app-navbar />
+
+<section class="relative lg:pt-20 pt-16">
+  <div class="bg-gray-50 min-h-screen p-6 lg:p-12">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Loading -->
+      <div *ngIf="loading" class="text-center py-20 text-gray-500">
+        Loading posts...
+      </div>
+
+      @for(post of posts; track $index) {
+        <!-- Featured Post -->
+        <div class="mb-20">
+          <a [routerLink]="['/blog-post', post.id]" class="block rounded-2xl overflow-hidden">
+            <img
+              [src]="post.featured_image"
+              alt="{{ post.title }}"
+              class="w-160 object-cover"
+            />
+          </a>
+          <div class="mt-6">
+            <a [routerLink]="['/blog-post', post.id]">
+              <h1 class="text-4xl font-bold text-gray-900 hover:text-indigo-600 transition">
+                {{ post.title }}
+              </h1>
+            </a>
+            <div class="text-gray-500 text-sm mt-2">
+              {{ post.publish_date | date:'longDate' }} • #{{ post.category }}
+            </div>
+            <p
+              [innerHTML]="post.content"
+              class="mt-4 text-gray-600 text-lg">
+            </p>
+            <a
+              [routerLink]="['/blog-post', post.id]"
+              class="inline-block mt-4 text-indigo-600 font-medium hover:underline"
+            >
+              Continue Reading →
+            </a>
+          </div>
+        </div>
+      }
+
+      <!-- Pagination -->
+      <div class="mt-16 flex justify-center space-x-2">
+        <button class="px-4 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-100">Previous</button>
+        <button class="px-4 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-100">Next</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="py-10 text-center text-gray-500 text-sm bg-gray-100">
+  <p>© 2025 Money Hub. All rights reserved.</p>
+  <div class="mt-4 space-x-4">
+    <a href="#" class="hover:text-gray-700">Terms & Conditions</a>
+    <a href="#" class="hover:text-gray-700">Privacy Policy</a>
+    <a href="#" class="hover:text-gray-700">Contact</a>
+  </div>
+</footer>

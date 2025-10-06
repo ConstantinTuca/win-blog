@@ -1,0 +1,84 @@
+{
+	"name": "win-blog",
+	"version": "1.0.0",
+	"description": "win-blog",
+	"main": "./server/app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "cd client/ && npm install && ng build --aot --configuration production",
+		"start": "node --optimize_for_size --max_old_space_size=460 --gc_interval=100 server/app.js",
+		"dev": "nodemon server/app.js",
+		"preinstall": "npm i -g @angular/cli"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ConstantinTuca/win-blog.git"
+	},
+	"keywords": [
+		"win-blog"
+	],
+	"author": "Tuloco S.R.L.",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ConstantinTuca/win-blog/issues"
+	},
+	"engines": {
+		"node": "22.11.0",
+		"npm": "9.8.0"
+	},
+	"homepage": "https://github.com/ConstantinTuca/win-blog#readme",
+	"dependencies": {
+		"@angular/material-moment-adapter": "~20.1.5",
+		"@aws-sdk/client-ses": "^3.864.0",
+		"@babel/core": "^7.19.6",
+		"@socket.io/redis-adapter": "~8.3.0",
+		"@socket.io/redis-emitter": "~5.1.0",
+		"babel": "^6.23.0",
+		"compression": "^1.7.4",
+		"cookie-parser": "^1.4.6",
+		"crypto-js": "^4.2.0",
+		"dayjs": "^1.11.10",
+		"dotenv": "^17.2.1",
+		"express": "^4.18.2",
+		"express-timeout-handler": "^2.2.2",
+		"gulp": "^5.0.1",
+		"gulp-babel": "^8.0.0",
+		"gulp-clean": "^0.4.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-less": "^5.0.0",
+		"gulp-livereload": "^4.0.2",
+		"gulp-plumber": "^1.2.1",
+		"gulp-uglify": "^3.0.2",
+		"handlebars": "^4.7.8",
+		"helmet": "^8.1.0",
+		"jsonwebtoken": "^9.0.2",
+		"jsonwebtoken-refresh": "^5.7.0",
+		"konfig": "^0.2.1",
+		"lodash": "^4.17.21",
+		"morgan": "^1.10.0",
+		"multer": "2.0.2",
+		"ngx-editor": "^18.0.0",
+		"node": "^20.11.0",
+		"node-cron": "^4.2.1",
+		"node-promise": "^0.5.14",
+		"nodemailer": "^7.0.5",
+		"nodemon": "~3.1.10",
+		"otpauth": "^9.3.4",
+		"pg": "^8.11.3",
+		"phantom": "^6.3.0",
+		"qrcode": "^1.5.4",
+		"redis": "~5.8.0",
+		"sequelize": "^6.37.1",
+		"socket.io": "^4.7.4",
+		"stripe": "^18.5.0",
+		"swag": "^0.7.0",
+		"xlsx": "^0.18.5"
+	},
+	"devDependencies": {
+		"@types/async": "^3.2.25",
+		"@types/xlsx": "^0.0.36",
+		"gulp-jshint": "^2.1.0",
+		"jshint": "^2.13.6"
+	}
+}

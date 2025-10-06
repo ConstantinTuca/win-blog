@@ -1,0 +1,141 @@
+<div class="page-wrapper toggled" [ngClass]="{ 'toggled': activeSidebar }">
+   <app-sidebar/>
+
+    <main class="page-content bg-gray-50 dark:bg-slate-800">
+        <app-topbar (toggleClass)="toggleClass()"/>
+
+        <div class="container-fluid relative px-3">
+            <div class="layout-specing">
+                <div class="max-w-3xl mx-auto mt-8 px-4 sm:px-6">
+                  <div
+                    class="bg-gradient-to-r from-indigo-300 via-purple-200 to-pink-100 rounded-3xl shadow-xl p-[2px]"
+                  >
+                    <div
+                      class="bg-white/90 backdrop-blur-xl rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col space-y-8"
+                    >
+                      <!-- Header -->
+                      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                        <div class="text-center sm:text-left">
+                          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">
+                            My Subscription
+                          </h2>
+                          <p class="text-gray-500 mt-1 text-sm sm:text-base">
+                            Manage your premium plan and billing details
+                          </p>
+                        </div>
+                        @if(subscription?.status) {
+                          <div class="mt-3 sm:mt-0 text-center sm:text-right">
+                            <span
+                              class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium shadow"
+                              [ngClass]="{
+                                'bg-green-100 text-green-700': subscription?.status === 'Active',
+                                'bg-red-100 text-red-700': subscription?.status === 'Canceled',
+                                'bg-yellow-100 text-yellow-700':
+                                  subscription?.status === 'Past_due'
+                              }"
+                            >
+                              {{ subscription?.status | titlecase }}
+                            </span>
+                          </div>
+                        }
+                      </div>
+
+                      <!-- Loading -->
+                      @if(loading) {
+                        <div class="text-center py-12">
+                          <p class="text-gray-500 text-sm sm:text-base">
+                            Loading subscription details...
+                          </p>
+                        </div>
+                      }
+
+                      <!-- Subscription Details -->
+                      @if(!loading && subscription) {
+                        <div class="space-y-6 sm:space-y-8">
+                          <!-- Plan Info -->
+                          <div
+                            class="flex flex-col sm:flex-row sm:items-center sm:justify-between bg-gray-50 rounded-2xl p-5 sm:p-6 shadow-inner space-y-4 sm:space-y-0"
+                          >
+                            <div class="flex items-center space-x-4">
+                              <div
+                                class="bg-indigo-600 text-white w-12 h-12 flex items-center justify-center rounded-2xl shadow-md text-lg"
+                              >
+                                💎
+                              </div>
+                              <div>
+                                <h3 class="text-lg sm:text-xl font-semibold">
+                                  {{ subscription.plan }}
+                                </h3>
+                                <p class="text-gray-500 text-sm">
+                                  {{ subscription.price }} {{ subscription.currency }} / month
+                                </p>
+                              </div>
+                            </div>
+                            <div class="text-left sm:text-right">
+                              <p class="text-xs sm:text-sm text-gray-500">Next Billing Date</p>
+                              <p class="font-medium text-sm sm:text-base">
+                                {{ subscription.current_period_end | date: 'longDate' }}
+                              </p>
+                            </div>
+                          </div>
+
+                          <!-- Last Payment -->
+                          <div class="bg-gray-50 rounded-2xl p-5 sm:p-6 shadow-inner">
+                            <p class="text-xs sm:text-sm text-gray-500 mb-1">Last Payment</p>
+                            <p
+                              *ngIf="subscription.last_payment; else noPayment"
+                              class="font-medium text-sm sm:text-base"
+                            >
+                              {{ subscription.last_payment | date: 'longDate' }}
+                            </p>
+                            <ng-template #noPayment>
+                              <span class="text-sm">–</span>
+                            </ng-template>
+                          </div>
+
+                          <!-- Actions -->
+                          <div class="flex justify-center">
+                            <button
+                              (click)="onManage()"
+                              class="w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 sm:px-8 py-3 rounded-xl shadow-md hover:opacity-90 transition text-sm sm:text-base"
+                            >
+                              Manage Subscription
+                            </button>
+                          </div>
+                        </div>
+                      }
+
+                      <!-- No Subscription -->
+                      @if(!loading && !subscription) {
+                        <div
+                          class="text-center text-gray-600 py-12 space-y-4"
+                        >
+                          <p class="text-lg sm:text-base">You don’t have an active subscription yet.</p>
+                          <button
+                            (click)="onSubscribe()"
+                            class="w-full sm:w-auto inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 sm:px-8 py-3 rounded-xl shadow-md hover:opacity-90 transition text-sm sm:text-base"
+                          >
+                            Subscribe Now – 5 €
+                          </button>
+                        </div>
+
+                        <!-- <div class="max-w-md mx-auto mt-10 p-6 bg-white shadow-lg rounded-2xl text-center">
+                          <h1 class="text-2xl font-bold mb-4">Subscribe to Premium</h1>
+                          <p class="text-gray-600 mb-6">Get access to premium content for <strong>5€/month</strong>.</p>
+
+                          <button (click)="onSubscribe()" [disabled]="loading"
+                            class="w-full bg-indigo-600 text-white py-3 rounded-xl hover:bg-indigo-700 disabled:opacity-50">
+                            {{ loading ? 'Redirecting...' : 'Subscribe Now' }}
+                          </button>
+                        </div> -->
+                      }
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+
+       <app-footer/>
+    </main>
+</div>

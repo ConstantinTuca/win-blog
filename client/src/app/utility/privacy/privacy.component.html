@@ -1,0 +1,71 @@
+<app-navbar [childMessage]="'true'" [navLight]="true"/>
+
+<section class="relative table w-full py-32 lg:py-36 bg-[url('/assets/images/bg/01.jpg')] bg-no-repeat bg-center bg-cover">
+    <div class="absolute inset-0 bg-black opacity-80"></div>
+    <div class="container relative">
+        <div class="grid grid-cols-1 text-center mt-10">
+            <h3 class="md:text-4xl text-3xl md:leading-normal leading-normal font-medium text-white">{{ "PRIVACY.TITLE" | translate}}</h3>
+        </div><!--end grid-->
+    </div><!--end container-->
+</section><!--end section-->
+<div class="relative">
+    <div class="shape overflow-hidden z-1 text-white dark:text-slate-900">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+        </svg>
+    </div>
+</div>
+
+<section class="relative lg:py-24 py-16">
+    <div class="container relative">
+        <div class="md:flex justify-center">
+            <div class="md:w-3/4">
+                <div class="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
+                    <h5 class="text-xl font-medium mb-4">{{ "PRIVACY.EFFECTIVE_DATE" | translate }}</h5>
+                    <p class="indent-8 text-slate-400">{{ "PRIVACY.INTRO" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "PRIVACY.INFORMATION" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 whitespace-pre-line">{{ "PRIVACY.INFORMATION_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "PRIVACY.USAGE" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 whitespace-pre-line">{{ "PRIVACY.USAGE_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "PRIVACY.LEGAL_BASIS" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 whitespace-pre-line">{{ "PRIVACY.LEGAL_BASIS_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "PRIVACY.SHARING" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 whitespace-pre-line">{{ "PRIVACY.SHARING_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "PRIVACY.RETENTION" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 whitespace-pre-line">{{ "PRIVACY.RETENTION_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "PRIVACY.SECURITY" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 whitespace-pre-line">{{ "PRIVACY.SECURITY_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "PRIVACY.INTERNATIONAL" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 whitespace-pre-line">{{ "PRIVACY.INTERNATIONAL_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "PRIVACY.RIGHTS" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 whitespace-pre-line">{{ "PRIVACY.RIGHTS_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "PRIVACY.COOKIES" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 whitespace-pre-line">{{ "PRIVACY.COOKIES_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "PRIVACY.CHILDREN" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 whitespace-pre-line">{{ "PRIVACY.CHILDREN_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "PRIVACY.CHANGES" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 whitespace-pre-line">{{ "PRIVACY.CHANGES_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "PRIVACY.CONTACT" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 whitespace-pre-line">{{ "PRIVACY.CONTACT_TEXT" | translate }}</p>
+
+                    <!-- <div class="mt-8">
+                        <a href="" class="btn bg-green-600 hover:bg-green-700 text-white rounded-md">Print</a>
+                    </div> -->
+                </div>
+            </div><!--end -->
+        </div><!--end grid-->
+    </div><!--end container-->
+</section>
+<app-footer/>

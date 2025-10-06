@@ -1,0 +1,930 @@
+/*********************************/
+/*         Menu                  */
+/*===============================*/
+#topnav {
+    @apply fixed start-0 end-0 top-0 z-999 bg-transparent border-0 transition-all duration-500 ease-in-out;
+    .logo {
+        @apply float-left text-black dark:text-white #{!important};
+        .l-dark {
+            @apply hidden;
+        }
+        .l-light {
+            @apply inline-block;
+        }
+        &:focus {
+          @apply outline-none;
+        }
+    }
+    .has-submenu{
+      @apply relative;
+      &.active {
+        a {
+          @apply text-white dark:text-slate-900;
+        }
+        .submenu {
+          li{
+            &.active {
+              > a {
+                @apply text-indigo-600 dark:text-indigo-600 #{!important};
+              }
+            }
+          }
+        }
+        &.active {
+          .menu-arrow {
+            @apply border-indigo-600 dark:border-indigo-600;
+          }
+        }
+      }
+      .submenu {
+        .submenu-arrow {
+          border-width: 0px 0.125rem 0.125rem 0px;
+          @apply absolute end-[1.25rem] top-[0.8125rem] border-black dark:border-white rounded-[0.5px] inline-block p-[2px] -rotate-[45deg];
+        }
+        .has-submenu {
+          &:hover {
+            > .submenu-arrow {
+              @apply border-indigo-600 dark:border-indigo-600;
+            }
+          }
+          .submenu {
+            .has-submenu{
+              &:hover {
+                .submenu-arrow {
+                  @apply border-indigo-600 dark:border-indigo-600;
+                }
+                > .submenu-arrow {
+                  @apply border-indigo-600 dark:border-indigo-600;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .navbar-toggle {
+      @apply border-0 relative p-0 m-0 cursor-pointer;
+      .lines {
+        @apply w-[25px] block relative h-[18px] mt-[30px] me-0 mb-[26px] ms-[10px];
+      }
+      span {
+        transition: transform 0.5s ease;
+        @apply h-[2px] w-full bg-black dark:bg-white block mb-[5px];
+        &:last-child {
+          @apply mb-0;
+        }
+      }
+      &.open {
+        span {
+          @apply absolute;
+          &:first-child {
+            @apply top-[6px] rotate-[45deg];
+          }
+          &:nth-child(2) {
+            @apply invisible;
+          }
+          &:last-child {
+            @apply w-full top-[6px] -rotate-[45deg];
+          }
+          &:hover {
+            @apply bg-indigo-600;
+          }
+        }
+      }
+      &:hover, &:focus,
+      .navigation-menu > li > a:hover {
+        @apply bg-transparent;
+      }
+    }
+    .settings-section {
+
+      @apply float-right leading-[74px];
+      > li {
+        @apply leading-[initial];
+      }
+      .login-btn-primary,
+      .btn-icon-dark {
+        @apply hidden;
+      }
+      .login-btn-light,
+      .btn-icon-light {
+        @apply inline-block;
+      }
+      .search-bar {
+        .menu-search {
+          form {
+            @apply relative;
+          }
+        }
+        .searchform {
+          @apply after:absolute after:end-[14px] after:top-[14px] after:text-xl after:leading-5 after:pointer-events-none #{!important};
+          input[type=text] {
+            @apply shadow-none py-2.5 pe-[42px] ps-3 h-11 text-sm block outline-none #{!important};
+          }
+          input[type=submit] {
+            @apply hidden;
+          }
+          &:after {
+            content: "\f0349";
+            font-family: "Material Design Icons";
+          }
+        }
+      }
+    }
+    .settings-section,
+    .buy-menu-btn {
+      .dropdown {
+        .dropdown-toggle {
+          @apply after:hidden;
+        }
+      }
+    }
+    .navigation-menu {
+      @apply list-none m-0 p-0;
+      > li {
+        @apply float-left block relative my-0 mx-[10px];
+        > a {
+          @apply block text-black dark:text-white text-base bg-transparent font-medium tracking-[1px] leading-6 font-body px-[15px];
+          &:hover, 
+          &:active {
+            @apply text-indigo-600;
+          }
+        }
+        &:hover, 
+        &.active{
+          > a {
+            @apply text-indigo-600 dark:text-indigo-600 #{!important};
+          }
+        }
+        .submenu.megamenu {
+          li {
+            .megamenu-head {
+              @apply py-[10px] px-5 whitespace-nowrap text-xs uppercase tracking-[0.04em] font-semibold text-slate-400 #{!important};
+            }
+          }
+        }
+        .submenu {
+          li {
+            @apply relative mx-0;
+          }
+        }
+      }
+      .has-submenu {
+        .menu-arrow {
+          border-width: 0 2px 2px 0;
+          @apply border-black dark:border-white rounded-[0.5px] inline-block p-[2px] rotate-[45deg] absolute transition-all duration-500 end-0 top-8;
+        }
+      }
+    }
+    .menu-extras {
+      @apply float-right;
+    }
+    &.scroll {
+      @apply bg-white dark:bg-slate-900 border-none shadow;
+      .navigation-menu {
+        > li {
+          > a {
+            @apply text-black dark:text-white;
+          }
+          > .menu-arrow {
+            @apply border-black dark:border-white;
+          }
+          &:hover, 
+          &.active{
+            > a {
+              @apply text-indigo-600;
+            }
+            > .menu-arrow {
+              @apply border-indigo-600 dark:border-indigo-600;
+            }
+          }
+        }
+      }
+    }
+    &.defaultscroll{
+      &.dark-menubar {
+        .logo {
+          @apply leading-[70px];
+        }
+      }
+      &.scroll {
+        .logo {
+          @apply leading-[62px];
+        }
+      }
+    }
+    &.nav-sticky {
+      @apply bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow dark:shadow-gray-700;
+      .navigation-menu{
+        &.nav-light {
+          > li {
+            > a {
+              @apply text-black dark:text-white;
+            }
+            &.active {
+              > a {
+                @apply text-indigo-600 dark:text-indigo-600 #{!important};
+              }
+            }
+            &:hover, 
+            &.active{
+              > .menu-arrow {
+                @apply border-indigo-600 #{!important};
+              }
+            }
+            
+            &:hover, 
+            &.active {
+              > a {
+                @apply text-indigo-600 dark:text-indigo-600 #{!important};
+              }
+            }
+          }
+          .has-submenu {
+            .menu-arrow {
+              @apply border-black dark:border-white;
+            }
+          }
+        }
+      }
+      &.tagline-height {
+        @apply top-0 #{!important};
+      }
+      .settings-section {
+        .login-btn-primary,
+        .btn-icon-dark {
+          @apply inline-block;
+        }
+        .login-btn-light,
+        .btn-icon-light {
+          @apply hidden;
+        }
+      }
+      
+      .logo {
+        .l-dark {
+          @apply inline-block;
+        }
+        .l-light {
+          @apply hidden;
+        }
+    }
+  }
+}
+
+.logo {
+  @apply font-semibold text-[24px] me-[15px] pt-0 pb-0 tracking-[1px] leading-[68px];
+}
+
+@media (min-width: 1025px) {
+  #topnav {
+    .navigation-menu {
+      > li {
+        .submenu{
+          &.megamenu {
+            @apply w-[1116px] #{!important};
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 992px) {
+  #topnav {
+    .navigation-menu {
+      > li {
+        .submenu{
+          &.megamenu {
+            @apply w-[936px] #{!important};
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #topnav {
+    .navigation-menu {
+      @apply flex flex-wrap justify-center;
+      > li {
+        .submenu {
+          transition: all 0.2s ease;
+          @apply absolute top-full start-0 z-[1000] py-[15px] px-0 list-none min-w-[180px] invisible opacity-0 mt-[10px] rounded-md bg-white dark:bg-slate-900 shadow dark:shadow-gray-700;
+          li {
+            @apply relative;
+            a {
+              transition: all 0.3s;
+              @apply block py-[10px] px-5 clear-both whitespace-nowrap text-[16px] tracking-[0.04em] font-normal text-black dark:text-white leading-[17px];
+              &:hover {
+                @apply text-indigo-600 dark:text-indigo-600 #{!important};
+              }
+            }
+            ul {
+              @apply list-none ps-0 m-0;
+            }
+          }
+          &.megamenu {
+            @apply whitespace-nowrap start-1/2 -translate-x-1/2 fixed top-auto flex;
+            > li {
+              @apply overflow-hidden align-top w-1/5;
+              .submenu {
+                @apply start-full top-0 ms-[10px] -mt-px;
+              }
+            }
+          }
+          > li {
+            .submenu {
+              @apply start-[101%] top-0 ms-[10px] -mt-px;
+            }
+          }
+        }
+        > a {
+          @apply py-[25px] min-h-[62px];
+        }
+        &:hover {
+          > .menu-arrow {
+            @apply border-indigo-600 dark:border-indigo-600;
+          }
+        }
+        &:hover, 
+        &.active{
+          > a {
+            @apply text-indigo-600 dark:text-indigo-600 #{!important};
+          }
+        }
+        &.last-elements{
+          .submenu {
+            @apply start-auto end-0 before:start-auto before:end-[10px];
+            > li{
+              &.has-submenu {
+                .submenu {
+                  @apply start-auto end-full ms-0 me-[10px];
+                }
+              }
+            }
+          }
+        }
+      }
+      &.nav-light {
+        > li {
+          > a {
+            @apply text-white/50;
+          }
+          &.active {
+            > a {
+              @apply text-white #{!important};
+            }
+          }
+          &:hover {
+            > .menu-arrow {
+              @apply border-white #{!important};
+            }
+            > a {
+              @apply text-white #{!important};
+            }
+          }
+        }
+        .has-submenu {
+          .menu-arrow {
+            @apply border-white/50;
+          }
+          &.active {
+            .menu-arrow {
+              @apply border-white #{!important};
+            }
+          }
+        }
+      }
+    }
+    .settings-section {
+      @apply ps-[15px] ms-[15px];
+    }
+    .navbar-toggle {
+      @apply hidden;
+    }
+    #navigation {
+      @apply block #{!important};
+    }
+    &.scroll {
+      @apply top-0;
+      .navigation-menu {
+        > li {
+          > a {
+            @apply py-5;
+          }
+        }
+      }
+    }
+    &.scroll-active {
+      .navigation-menu {
+        > li {
+          > a {
+            @apply py-[25px];
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  #topnav {
+    @apply bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 min-h-[74px];
+    .logo {
+      .l-dark {
+        @apply inline-block #{!important};
+      }
+      .l-light {
+        @apply hidden #{!important};
+      }
+    }
+    .container {
+      @apply w-auto;
+    }
+    #navigation {
+      @apply max-h-[400px] shadow;
+    }
+    .navigation-menu {
+      @apply float-none #{!important};
+      > li {
+        @apply float-none #{!important};
+        .submenu {
+          @apply hidden list-none ps-5 m-0;
+          li {
+            a {
+              transition: all 0.3s;
+              @apply block relative py-[7px] px-[15px] tracking-[0.04em] text-black dark:text-white #{!important};
+            }
+          }
+          &.megamenu {
+            li {
+              .megamenu-head {
+                @apply py-[7px] px-[15px];
+              }
+            }
+            > li {
+              > ul {
+                @apply list-none ps-0;
+                > li {
+                  > span {
+                    @apply block relative py-[10px] px-[15px] uppercase text-xs tracking-[2px] text-slate-200;
+                  }
+                }
+              }
+            }
+          }
+          &.open {
+            @apply block;
+          }
+          .submenu {
+            @apply hidden list-none;
+            &.open {
+              @apply block;
+            }
+          }
+        }
+        > a {
+          @apply text-black dark:text-white py-[10px] px-[20px] after:absolute after:end-[15px];
+        }
+        > a:hover,
+        .submenu li a:hover,
+        &.has-submenu.open > a {
+          @apply text-indigo-600;
+        }
+      }
+    }
+    .menu-extras {
+      .menu-item {
+        @apply border-gray-200 dark:border-gray-700;
+      }
+    }
+    .navbar-header {
+      @apply float-left;
+    }
+
+    .settings-section {
+      .login-btn-primary,
+      .btn-icon-dark {
+        @apply inline-block #{!important};
+      }
+      .login-btn-light,
+      .btn-icon-light {
+        @apply hidden;
+      }
+    }
+    .has-submenu {
+      .submenu {
+        .submenu-arrow {
+          @apply rotate-[45deg] absolute end-5 top-3;
+        }
+      }
+      &.active {
+        a {
+          @apply text-indigo-600;
+        }
+      }
+    }
+  }
+  
+  #navigation {
+    @apply absolute top-[74px] start-0 w-full hidden h-auto bg-white dark:bg-slate-900 overflow-auto;
+    &.open {
+      @apply block overflow-y-auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #topnav {
+    .navigation-menu {
+      .has-submenu {
+        .menu-arrow {
+          @apply end-2 top-4;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #topnav {
+    .navigation-menu {
+      > li{
+        &.has-submenu{
+          &:hover {
+            > .submenu {
+              @apply visible opacity-100 mt-0;
+              > li{
+                &.has-submenu{
+                  &:hover {
+                    > .submenu {
+                      @apply visible opacity-100 ms-0 me-0;
+                      > li{
+                        &:hover {
+                          > .submenu {
+                            @apply visible opacity-100 ms-0 me-0;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .navbar-toggle {
+    @apply block;
+  }
+}
+
+@media (max-width: 425px) {
+  #topnav {
+    .buy-menu-btn {
+      @apply block my-0 mx-[10px] py-[10px] px-5 #{!important};
+      .dropdown {
+        .dropdown-menu{
+          &.show {
+            transform: translate3d(0px, -54px, 0px) !important;
+          }
+        }
+      }
+    }
+  }
+}
+.tagline {
+    @apply absolute w-full z-[99] text-sm py-[13px] px-0;
+}
+@media screen and (max-width: 575px) {
+    .tagline {
+        @apply hidden;
+    }
+    .tagline-height {
+        @apply top-0 #{!important}; 
+    }
+}
+@media (min-width: 576px) {
+  .tagline-height {
+    @apply top-[47px] #{!important};
+  }
+}
+
+.sidebar-nav {
+    @apply py-[15px] px-0;
+        > .navbar-item {
+          @apply py-[3px] px-[15px];
+          .navbar-link {
+            @apply text-[15px] font-semibold;
+            .navbar-icon {
+              @apply text-lg me-[6px];
+            }
+          }
+          &:hover,
+          &.active {
+            .navbar-link {
+              @apply text-indigo-600;
+            }
+          }
+    }
+    li{
+      &.active {
+        a {
+          @apply text-indigo-600;
+        }
+      }
+      &.account-menu.active,
+      &.account-menu:hover{
+        .navbar-link {
+          @apply bg-indigo-600 text-white dark:text-slate-900 #{!important};
+        }
+      }
+    }
+}
+
+.page-wrapper {
+  height: 100vh;
+  .sidebar-wrapper {
+      @apply fixed top-0 -start-[300px] z-999 shadow bg-white dark:bg-slate-900 duration-500 w-[300px] h-screen max-h-screen; 
+      @media  (max-width: 1024px) {
+          @apply start-0;
+      }
+      
+      @media  (max-width: 425px) {
+          @apply w-[260px];
+      }
+      ul {
+          @apply list-none p-0 m-0;
+      }
+      a {
+          @apply decoration-0;
+      }
+      .sidebar-content {
+          @apply relative overflow-y-auto h-full max-h-full;
+          &.desktop {
+              @apply overflow-y-hidden;
+          }
+      }
+      .sidebar-brand {
+          @apply flex items-center h-[70px] py-2.5 px-5;
+          > a {
+              @apply uppercase font-bold flex-grow duration-500;
+              &:focus {
+                  outline: none !important;
+              }
+          }
+          #close-sidebar {
+              @apply cursor-pointer text-2xl duration-500;
+          }
+      }
+      
+      .sidebar-menu {
+          @apply py-4 px-0;
+          .header-menu {
+              span {
+                  @apply font-medium text-sm pt-[15px] pb-[5px] px-5 inline-block;
+              }
+          }
+          
+          li {
+              a {
+                  @apply relative flex items-center w-full decoration-0 py-3 pe-6 ps-5 duration-500 font-medium;
+                  &:focus {
+                      outline: none !important;
+                  }
+                  @media (max-width: 1024px) {
+                      @apply py-2 px-6;
+                  }
+
+                  @media screen and (max-width: 425px) {
+                      @apply py-2 pe-6 ps-3;
+                  }
+                  &:hover > i::before {
+                      @apply inline-block;
+                  }
+                  i {
+                      @apply size-8 bg-gray-100 dark:bg-slate-800 flex items-center justify-center text-base text-center rounded-md duration-500 #{!important};
+                  }
+              }
+              &:hover,
+              &.active {
+                  i {
+                      @apply bg-gray-100 dark:bg-slate-700;
+                  }
+              }
+          }
+
+          .sidebar-dropdown {
+              > a {
+                  @apply after:absolute after:top-[15px] after:end-[15px] after:duration-500 after:text-slate-900 dark:after:text-white/50 after:text-sm;
+                  &:after {
+                      content: "\F0142" !important;
+                      font-family: 'Material Design Icons';
+                  }
+              }
+              &.active {
+                  > a {
+                      @apply after:rotate-90 after:end-[17px];
+                  }
+              }
+              &:hover,
+              &.active {
+                  > a:after {
+                      @apply text-indigo-600 dark:text-white;
+                  }
+              }
+              
+              .sidebar-submenu {
+                  @apply hidden;
+                  ul {
+                      @apply py-[5px] px-0;
+                      li {
+                          @apply ps-[25px] text-sm;
+                          a {
+                              @apply before:text-slate-900 dark:before:text-white before:me-1 before:text-base before:duration-500;
+                              &:before {
+                                  content: "\F09DF" !important;
+                                  font-family: 'Material Design Icons';
+                              }
+                              .badge,
+                              .label {
+                                  @apply float-right mt-0;
+                              }
+                          }
+                      }
+                  }
+              }
+          }    
+          ul {
+              li {
+                  a {
+                      span {
+                          &.label,
+                          &.badge {
+                              float: right;
+                              margin-top: 8px;
+                              margin-left: 5px;
+                          }
+                      }
+                  }
+              }
+          }
+      }
+
+      &.sidebar-dark {
+          @apply bg-slate-900;
+      }
+      &.sidebar-colored {
+          @apply bg-indigo-600;
+      }
+
+      &.sidebar-colored,
+      &.sidebar-dark {
+          .sidebar-brand > a,
+          .sidebar-menu li a {
+              @apply text-white/50;
+          }
+          .sidebar-menu li:hover > a,
+          .sidebar-menu li.active > a,
+          .sidebar-menu li:active > a,
+          .sidebar-menu li:active > a:before,
+          .sidebar-menu li:hover > a:before,
+          .sidebar-menu li.active > a:before,
+          .sidebar-menu .sidebar-dropdown.active > a,
+          .sidebar-brand > a:hover {
+              @apply text-white #{!important};
+          }
+          .sidebar-menu {
+              li {
+                  a {
+                      i {
+                          @apply bg-gray-50/5 #{!important};
+                      }
+                  }
+                  &:hover,
+                  &.active {
+                      i {
+                          @apply bg-gray-50/10 #{!important};
+                      }
+                  }
+              }
+
+              .sidebar-dropdown {
+                  > a {
+                      @apply after:text-white/10;
+                  }
+                  &:hover,
+                  &.active {
+                      > a {
+                          @apply after:text-white;
+                      }
+                  }
+                  
+                  .sidebar-submenu {
+                      ul {
+                          li {
+                              a {
+                                  @apply before:text-white/5; 
+                              }
+                          }
+                      }
+                  }
+              }    
+          }
+      }
+      .sidebar-brand > a,
+      .sidebar-menu li a {
+          @apply text-slate-900 dark:text-white/50 font-medium;
+      }
+      .sidebar-menu li:hover > a,
+      .sidebar-menu li.active > a,
+      .sidebar-menu li:active > a,
+      .sidebar-menu li:active > a:before,
+      .sidebar-menu li:hover > a:before,
+      .sidebar-menu li.active > a:before,
+      .sidebar-menu .sidebar-dropdown.active > a,
+      .sidebar-brand > a:hover {
+          @apply text-indigo-600 dark:text-white #{!important};
+      }
+  }
+
+  .page-content {
+      @apply inline-block w-full ps-0 overflow-x-hidden duration-500;
+      .top-header {
+          @apply fixed top-0 inset-x-0 z-999 max-h-[70px] duration-500;
+          .header-bar {
+              @apply relative justify-between items-center p-6 bg-white dark:bg-slate-900 h-[70px] shadow dark:shadow-gray-700;
+
+              @media (max-width: 425px) {
+                  @apply py-6 px-3;
+              }
+          }
+      }
+
+      .layout-specing {
+          min-height: calc(100vh - 71px) !important;
+          @apply relative pt-[94px] px-3 pb-6 #{!important};
+          @media (max-width: 425px) {
+              @apply px-0 #{!important}
+          }
+      }
+  }
+
+  &.toggled {
+      @media screen and (min-width: 1025px) {
+          .page-content {
+              @apply ps-[300px];
+          }
+      }
+      .top-header {
+          @apply start-[301px];
+          @media (max-width: 1024px) {
+              @apply start-0;
+          }
+      }
+      .sidebar-wrapper {
+          @apply start-0;
+          @media  (max-width: 1024px) {
+              @apply -start-[300px];
+          }
+      }
+  }
+}
+
+.sidebar-footer {
+  @apply absolute w-full bottom-0 start-0 end-0 py-3 ps-6 pe-5 shadow dark:shadow-gray-700 h-[51px];
+  @media(max-width: 425px) {
+      @apply py-2 px-3 #{!important};
+  }
+}
+
+
+.sidebar-nav {
+  > .navbar-item {
+    &:hover,
+    &.active {
+      .navbar-link {
+        @apply text-indigo-600;
+      }
+    }
+}
+li{
+  &.active {
+    a {
+      @apply text-indigo-600;
+    }
+  }
+  &.account-menu {
+    &.active,
+    &:hover{
+      .navbar-link {
+        @apply text-indigo-600 dark:text-white #{!important};
+      }
+    }
+  }
+}
+}

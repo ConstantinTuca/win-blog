@@ -1,0 +1,92 @@
+<div class="page-wrapper toggled" [ngClass]="{ 'toggled': activeSidebar }">
+    <app-admin-sidebar/>
+
+    <main class="page-content bg-gray-50 dark:bg-slate-800">
+        <app-admin-topbar (toggleClass)="toggleClass()"/>
+
+        <div class="container-fluid relative px-3">
+            <div class="layout-specing">
+                <div class="bg-gray-50 p-8">
+                  <div class="max-w-4xl mx-auto mt-8 px-4 sm:px-6">
+                    <div class="bg-white rounded-3xl shadow-xl p-6 sm:p-8 space-y-8">
+                      <!-- Loading -->
+                      <div *ngIf="loading" class="text-center py-12">
+                        <p class="text-gray-500">Loading subscription details...</p>
+                      </div>
+
+                      <div *ngIf="!loading && subscription">
+                        <!-- User Info -->
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
+                          <div>
+                            <h2 class="text-2xl font-bold text-gray-900">{{ subscription.name }}</h2>
+                            <p class="text-gray-500">{{ subscription.email }}</p>
+                          </div>
+                          <span
+                            class="px-3 py-1 rounded-full text-sm font-medium"
+                            [ngClass]="{
+                              'bg-green-100 text-green-700': subscription.status === 'active',
+                              'bg-red-100 text-red-700': subscription.status === 'canceled',
+                              'bg-yellow-100 text-yellow-700': subscription.status === 'past_due'
+                            }"
+                          >
+                            {{ subscription.status | titlecase }}
+                          </span>
+                        </div>
+
+                        <!-- Plan Info -->
+                        <div class="bg-gray-50 rounded-2xl p-5 mt-5 sm:p-6 shadow-inner flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-4 sm:space-y-0">
+                          <div>
+                            <h3 class="text-lg sm:text-xl font-semibold">{{ subscription.plan }}</h3>
+                            <p class="text-gray-500 text-sm sm:text-base">Next Billing: {{ subscription.current_period_end | date: 'dd.MM.yyyy' }}</p>
+                          </div>
+                          <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-2 sm:space-y-0">
+                            <button
+                              (click)="onCancel(subscription)"
+                              class="bg-red-500 text-white px-5 py-2 rounded-xl shadow hover:bg-red-600 transition text-sm sm:text-base"
+                            >
+                              Cancel Subscription
+                            </button>
+                          </div>
+                        </div>
+
+                        <!-- Stripe IDs -->
+                        <div class="bg-gray-50 rounded-2xl p-5 mt-5 sm:p-6 shadow-inner space-y-2">
+                          <p class="text-sm text-gray-500">Stripe Customer ID: <span class="font-medium">{{ subscription.stripe_customer_id }}</span></p>
+                          <p class="text-sm text-gray-500">Stripe Subscription ID: <span class="font-medium">{{ subscription.stripe_subscription_id }}</span></p>
+                        </div>
+
+                        <!-- Billing History -->
+                        <div class="bg-gray-50 rounded-2xl p-5 mt-5 sm:p-6 shadow-inner">
+                          <h4 class="text-lg font-semibold text-gray-900 mb-4">Billing History</h4>
+                          <div *ngIf="subscription.billing_history?.length; else noHistory">
+                            <ul class="divide-y divide-gray-200">
+                              <li *ngFor="let bill of subscription.billing_history" class="flex flex-col sm:flex-row sm:items-center sm:justify-between py-3 space-y-2 sm:space-y-0">
+                                <span class="text-sm sm:text-base">{{ bill.date | date: 'dd.MM.yyyy' }}</span>
+                                <span class="font-medium text-sm sm:text-base">{{ bill.amount }} {{ bill.currency }}</span>
+                                <span class="px-3 py-1 rounded-full text-xs sm:text-sm"
+                                      [ngClass]="{
+                                        'bg-green-100 text-green-700': bill.status==='paid',
+                                        'bg-yellow-100 text-yellow-700': bill.status==='pending',
+                                        'bg-red-100 text-red-700': bill.status==='failed'
+                                      }">
+                                  {{ bill.status | titlecase }}
+                                </span>
+                                <button (click)="onRefund(subscription)" class="ml-0 sm:ml-4 bg-yellow-500 text-white px-3 py-1 rounded-lg hover:bg-yellow-600 transition text-xs sm:text-sm">
+                                  Refund
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                          <ng-template #noHistory>
+                            <p class="text-gray-500 text-sm">No billing records found.</p>
+                          </ng-template>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <app-admin-footer/>
+    </main>
+</div>

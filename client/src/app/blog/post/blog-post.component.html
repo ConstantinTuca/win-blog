@@ -1,0 +1,65 @@
+<app-navbar />
+
+<section class="relative lg:pt-20 pt-16">
+  <div class="min-h-screen bg-gray-50 p-6 lg:p-12">
+    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+      <!-- Loading -->
+       @if(loading) {
+         <div class="text-center py-10 text-gray-500">
+           Loading post...
+         </div>
+       }
+
+      @if(!loading && post) {
+        <ng-container>
+          <!-- Featured Image -->
+          <div class="w-full">
+            <img
+              [src]="imagePreview"
+              alt="Featured"
+              class="w-160 object-cover"
+            />
+          </div>
+
+          <!-- Post Content -->
+          <div class="p-8 lg:p-12">
+            <!-- Title -->
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">
+              {{ post.title }}
+            </h1>
+
+            <!-- Meta -->
+            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-8">
+              <span>{{ post.publish_date | date: "dd.MM.yyyy"}}</span>
+              <span class="text-indigo-600 font-medium">#{{ post.category }}</span>
+              @if(post.tags) {
+                <span>
+                  <!-- {{ post.tags.split(',').map(tag => '#' + tag.trim()).join(' ') }} -->
+                  {{ post.tags }}
+                </span>
+              }
+            </div>
+
+            <!-- Content -->
+            <div class="prose prose-lg max-w-none" [innerHTML]="safeContent"></div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="border-t border-gray-200 flex justify-between px-8 py-6">
+            <a routerLink="/blog/1" class="text-indigo-600 hover:underline">← Previous Post</a>
+            <a routerLink="/blog/3" class="text-indigo-600 hover:underline">Next Post →</a>
+          </div>
+        </ng-container>
+      }
+    </div>
+  </div>
+</section>
+
+<footer class="py-10 text-center text-gray-500 text-sm bg-gray-100">
+  <p>© 2025 Money Hub. All rights reserved.</p>
+  <div class="mt-4 space-x-4">
+    <a href="#" class="hover:text-gray-700">Terms & Conditions</a>
+    <a href="#" class="hover:text-gray-700">Privacy Policy</a>
+    <a href="#" class="hover:text-gray-700">Contact</a>
+  </div>
+</footer>

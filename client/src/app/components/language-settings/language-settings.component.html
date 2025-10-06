@@ -1,0 +1,15 @@
+<span (clickOutside)="onClickedOutside()">
+  <button (click)="languageMenu = !languageMenu" class="dropdown-toggle size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-[20px] text-center bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 border border-gray-100 dark:border-gray-800 text-slate-900 dark:text-white rounded-md" type="button">
+      <span class="country-flag" [ngClass]="(savedLang ? savedLang : 'RO')"></span>
+  </button>
+
+  <div class="dropdown-menu absolute end-0 px-4 py-4 z-10 w-72 rounded-md bg-white dark:bg-slate-900 shadow dark:shadow-gray-700" [ngClass]="languageMenu ? '' : 'hidden'">
+    <div class="pt-4">
+      <label class="form-label font-medium text-slate-900 dark:text-white">{{'NAVBAR.LANGUAGE' | translate }}</label>
+      <div class="filter-search-form relative mt-2">
+        <ng-select class="form-input w-full filter-input-box bg-gray-50 dark:bg-slate-800 focus:ring-0" [items]="languages" [clearable]="false" bindLabel="name" bindValue="short" name='savedLang' (change)='switchLang($event)' [(ngModel)]='savedLang' placeholder="Select language">
+        </ng-select>
+      </div>
+    </div>
+  </div>
+</span>

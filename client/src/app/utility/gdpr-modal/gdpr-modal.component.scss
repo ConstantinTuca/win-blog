@@ -1,0 +1,5 @@
+.modal-fixed-height {
+  padding: 5px;
+  max-height: calc(100vh - 420px) !important;
+  overflow: auto;
+}

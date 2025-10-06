@@ -1,0 +1,992 @@
+{
+  "HOME": {
+    "TITLE": "Easy way to find your dream land",
+    "SUBTITLE": "A great plateform to buy and rent lands without any agent or commisions",
+    "SELL": "Lands for sell",
+    "RENT": "Lands for rent",
+    "YEARS": "Years Experience",
+    "ERROR": "Error",
+    "COUNTRY": "Error at the getting of the countries!",
+    "COUNTY": "Error at the getting of the counties!",
+    "LOCALITY": "Error at the getting of the localities!",
+    "VILLAGE": "Error at the getting of the villages!"
+  },
+
+  "LANDS": {
+    "TITLE": "Find lands",
+    "PRICE": "Price",
+    "PRICE_PER": "Price per",
+    "PAYMENT": "Payment type",
+    "NO_DATA_TITLE" : "No properties found",
+    "NO_DATA" : "Whoops, this is embarassing. It looks like no properties were found based on the filters applied.",
+    "ERROR" : "Error",
+    "FAV_SUCCESS": "The add set favorite!",
+    "FAV_ERR": "Error set favorite!"
+  },
+
+  "LAND_FILTER": {
+    "BTN_BUY": "Buy",
+    "BTN_RENT": "Rent",
+    "DESCRIPTION": {
+      "TITLE": "Search in description",
+      "PLACEHOLDER": "Search your keywords"
+    },
+    "LOCATION": {
+      "TITLE": "Location",
+      "COUNTRY": {
+        "TITLE": "Country",
+        "PLACEHOLDER": "Country"
+      },
+      "COUNTY": {
+        "TITLE": "County",
+        "PLACEHOLDER": "County"
+      },
+      "LOCALITY": {
+        "TITLE": "Locality",
+        "PLACEHOLDER": "Locality"
+      },
+      "VILLAGE": {
+        "TITLE": "Village",
+        "PLACEHOLDER": "Village"
+      },
+      "STREET": {
+        "TITLE": "Street",
+        "PLACEHOLDER": "Street"
+      }
+    },
+    "MIN_PRICE": {
+      "TITLE": "Min Price",
+      "PLACEHOLDER": "From"
+    },
+    "MAX_PRICE": {
+      "TITLE": "Max Price",
+      "PLACEHOLDER": "To"
+    },
+    "BTN_SEARCH": "Search",
+    "MORE" : "More",
+    "LESS" : "Less",
+    "FILTERS": "Filters",
+    "RESET" : "Reset",
+    "MIN_SURFACE" : {
+      "TITLE" : "Min surface",
+      "PLACEHOLDER" : "From"
+    },
+    "MAX_SURFACE" : {
+      "TITLE" : "Max surface",
+      "PLACEHOLDER" : "To"
+    },
+    "TYPE": {
+      "TITLE": "Land type",
+      "PLACEHOLDER": "Property type",
+      "DATA": {
+        "BUILDING": "for building",
+        "AGRICULTURAL": "Agricultural",
+        "RECREATIONAL": "Recreational",
+        "COMMERCIAL": "Commercial",
+        "WOOD": "Wood",
+        "MIXT": "Mixt",
+        "OTHER" : "Other"
+      }
+    },
+    "MIN_PRICE_M2" : {
+      "TITLE" : "Min price per m2",
+      "PLACEHOLDER" : "From"
+    },
+    "MAX_PRICE_M2" : {
+      "TITLE" : "Max price per m2",
+      "PLACEHOLDER" : "To"
+    },
+    "FACILITIES": {
+      "TITLE": "Facilities",
+      "ELECTRICITY" : "electricity",
+      "WATER" : "water",
+      "GAS" : "gas",
+      "TELEPHONE" : "telephone",
+      "DRAINAGE" : "drainage",
+      "SEPTIC_TANK" : "septic tank"
+    },
+    "SORT": {
+      "TITLE" : "Sort by",
+      "IMPLICIT" : "Implicit",
+      "NEW" : "The newest",
+      "OLD" : "The oldest",
+      "ASC" : "Increasing price",
+      "DESC": "Decreasing price",
+      "AREA_ASC" : "The smallest area",
+      "AREA_DESC": "The largest area"
+    }
+  },
+
+  "LOCATION_FILTER": {
+    "PLACEHOLDER": "Select location",
+    "PLACEHOLDER_INPUT": "Type the name of the location"
+  },
+
+  "FEATURED_PROPERTIES": {
+    "TITLE": "The Newest Lands",
+    "SUBTITLE": "Here are shown the latest lands that are uploaded in this platform"
+  },
+
+  "FEATURED": {
+    "TITLE": "We are here to help!",
+    "SUBTITLE": "What can you do?",
+    "SELL" : {
+      "TITLE": "Sell a land",
+      "DESCRIPTION": "We have continuous trafic of users that are searching for lands. Even though they are for investements, home building or agriculture"
+    },
+    "EXPLORE" : {
+      "TITLE": "Explore lands",
+      "DESCRIPTION": "Search through the numerous ads from the platform by using our custom filters"
+    },
+    "RENT" : {
+      "TITLE": "Rent",
+      "DESCRIPTION": "An incredible amount of lands for rent are listed on this platform. You only have to scroll through them"
+    }
+  },
+
+  "CONTACT": {
+    "TITLE": "We are here to help",
+    "SUBTITLE": "Get in touch !",
+    "NAME": {
+      "TITLE": "Your Name",
+      "PLACEHOLDER": "Name"
+    },
+    "EMAIL": {
+      "TITLE": "Your Email",
+      "PLACEHOLDER": "Email"
+    },
+    "QUESTION": {
+      "TITLE": "Your Question",
+      "PLACEHOLDER": "Subject"
+    },
+    "COMMENT": {
+      "TITLE": "Your Comment",
+      "PLACEHOLDER": "Message"
+    },
+    "BTN_SEND": {
+      "TITLE": "Send Message"
+    },
+    "MSG_ERR": {
+      "NAME": "The name of this contact form is mandatory!",
+      "EMAIL": "The email of this contact form is mandatory!",
+      "EMAIL_INCORRECT": "The email of this contact form is incorrect!",
+      "SUBJECT": "The subject of this contact form is mandatory!",
+      "MESSAGE": "The message of this contact form is mandatory!",
+      "SEND_SUCCESS": "The message was send with success!",
+      "SEND_ERROR": "Error on the sending the message!",
+      "MODAL_TITLE_SAVE" : "Send message",
+      "MODAL_CONTENT_SAVE" : "Do you want to send this message? ",
+      "MODAL_YES" : "Yes",
+      "MODAL_NO" : "No",
+      "MODAL_DISMISS" : "The message was not send!"
+    }
+  },
+
+  "NAVBAR": {
+    "HOME": "Home",
+    "BUY": "Buy",
+    "SELL": "Sell",
+    "CONTACT": "Contact",
+    "SIGNUP": "Signup",
+    "ADS": "Ads from country",
+    "LANGUAGE": "Language",
+    "CURRENCY": "Currency",
+    "MSG_ERROR": "We haven't opened in this country yet. We will be there in the near future."
+  },
+
+  "SIDEBAR": {
+    "DASHBOARD": "Dashboard",
+    "VIEW_PROP": "My Properties",
+    "FAV_PROP": "Favorite Properties",
+    "EXPLORE_PROP": "Explore Properties",
+    "ADD_PROP": "Add Properties",
+    "CHAT": "Chat",
+    "USER_PROF": "User Profile",
+    "USEFULL_LINKS": {
+      "TITLE": "Usefull links",
+      "FAQ": "FAQs",
+      "TERMS": "Term & Condition",
+      "PRIVACY": "Privacy Policy"
+    }
+  },
+
+  "MY_PROPERTIES": {
+    "TITLE_ACTIVE": "My active ads",
+    "TITLE_WAITING": "Awaiting ads",
+    "SUBTITLE_WAITING": "Here you can find the listings that are currently under moderation by an admin",
+    "TITLE_DEACTIVATED": "Deactivated listings",
+    "TITLE_MODERATED": "Here you will find the listings that have been moderated and were not approved",
+    "SUBTITLE_MODERATED": "Edit the listing to resolve the issues found",
+    "NO_FOUND" : "No properties found",
+    "MSG_ERROR" : "Error!",
+    "PRICE": "Price",
+    "PRICE_PER": "Price per",
+    "PAYMENT": "Payment type",
+    "DELETE": {
+      "TITLE": "Delete Ad",
+      "MSG": "Do you want to delete the ad",
+      "YES": "Yes",
+      "NO": "No"
+    },
+    "TABS": {
+      "ACTIVE": "Active",
+      "WAITING": "Pending",
+      "DEACTIVATED": "Deactivated",
+      "MODERATED": "Rejected after moderation"
+    },
+    "NO_DATA_TITLE": "No listings found",
+    "NO_DATA": "Oops, this is awkward. It looks like no listings were found."
+  },
+
+  "FAVORITE_PROPERTIES": {
+    "TITLE": "Favorite Properties",
+    "PRICE": "Price",
+    "PRICE_PER": "Price per",
+    "PAYMENT": "Payment type",
+    "NO_DATA_TITLE" : "No properties found",
+    "NO_DATA" : "Whoops, this is embarassing. It looks like no favorite properties"
+  },
+
+  "ADD_EDIT_PROPERTY" : {
+    "FOR_SALE": "For Sale",
+    "FOR_RENT": "For Renting",
+    "TITLE_ADD": "Add Property",
+    "TITLE_UPDATE": "Update Property",
+    "MAIN_INFO": {
+      "SUBTITLE": "Main info",
+      "TITLE": {
+        "TITLE": "Title",
+        "PLACEHOLDER": "Property Title"
+      },
+      "PRICE": {
+        "TITLE": "Price",
+        "PLACEHOLDER": "Price"
+      },
+      "SURFACE": {
+        "TITLE": "Surface",
+        "PLACEHOLDER": "Area"
+      },
+      "PRICE_PER": {
+        "TITLE": "Price per",
+        "PLACEHOLDER": "Price per unit"
+      },
+      "PAYMENT_TYPE": {
+        "TITLE": "Payment type",
+        "PLACEHOLDER": "Select payment type"
+      },
+      "NEGOTIABLE": "Negotiable",
+      "REASON_CANCEL_TITLE": "Reason for rejection",
+      "REASON_CANCEL_SUBTITLE": "Edit the listing according to the reason for cancellation"
+    },
+    "IMAGE": {
+      "TITLE": "Add images and video",
+      "SUBTITLE" : "The first image would pe the main image of the ad",
+      "ADD" : "Add images",
+      "MAKE_PRIMARY": "Make primary image",
+      "VIDEO" : {
+        "TITLE" : "Presentation video",
+        "PLACEHOLDER": "Link to the video presentation"
+      }
+    },
+    "LOCATION": {
+      "TITLE": "Location",
+      "COUNTRY": {
+        "TITLE": "Country",
+        "PLACEHOLDER": "Country"
+      },
+      "COUNTY": {
+        "TITLE": "County",
+        "PLACEHOLDER": "County"
+      },
+      "LOCALITY": {
+        "TITLE": "Locality",
+        "PLACEHOLDER": "Locality"
+      },
+      "VILLAGE": {
+        "TITLE": "Village",
+        "PLACEHOLDER": "Village"
+      },
+      "STREET": {
+        "TITLE": "Street",
+        "PLACEHOLDER": "Street"
+      },
+      "DETAILS": {
+        "TITLE": "Address details",
+        "PLACEHOLDER": "Address details (number, other details)"
+      }
+    },
+    "DETAILS" : {
+      "TITLE": "Ad details",
+      "DESCRIPTION": {
+        "TITLE": "Description",
+        "PLACEHOLDER": "The description of the ad"
+      },
+      "TYPE": {
+        "TITLE": "Type",
+        "PLACEHOLDER": "Property type",
+        "DATA": {
+          "BUILDING": "for building",
+          "AGRICULTURAL": "Agricultural",
+          "RECREATIONAL": "Recreational",
+          "COMMERCIAL": "Commercial",
+          "WOOD": "Wood",
+          "MIXT": "Mixt",
+          "OTHER" : "Other"
+        }
+      },
+      "DIMENSION": {
+        "TITLE": "Dimension",
+        "PLACEHOLDER": "Dimensions of the parcel"
+      },
+      "FENCE": {
+        "TITLE": "Fence",
+        "PLACEHOLDER": "If it has fence",
+        "DATA" : {
+          "YES" : "Yes",
+          "NO" : "No"
+        }
+      },
+      "LOCATION_TYPE": {
+        "TITLE": "Location type",
+        "PLACEHOLDER": "Location type"
+      }
+    },
+    "FACILITIES": {
+      "TITLE": "Facilities",
+      "ELECTRICITY" : "electricity",
+      "WATER" : "water",
+      "GAS" : "gas",
+      "TELEPHONE" : "telephone",
+      "DRAINAGE" : "drainage",
+      "SEPTIC_TANK" : "septic tank"
+    },
+    "ACCESS": {
+      "TITLE": "Access type",
+      "UNPAVED" : "unpaved",
+      "PAVED" : "paved",
+      "ASPHALTED" : "asphalted"
+    },
+    "SURROUNDING": {
+      "TITLE": "Surrounding",
+      "FOREST" : "forest",
+      "LAKE" : "lake",
+      "OPEN" : "open field",
+      "MOUNTAIN" : "mountain",
+      "SEA" : "sea"
+    },
+    "VIEW": {
+      "TITLE": "Remote viewing",
+      "SUBTITLE": "I use application for remote viewing",
+      "REMOTE": {
+        "TITLE" : "Remote view",
+        "PLACEHOLDER" : "Choose",
+        "YES" : "Yes",
+        "NO" : "No"
+      }
+    },
+    "CONTACT" : {
+      "TITLE" : "Contact",
+      "PERSON" : {
+        "TITLE" : "Contact person",
+        "PLACEHOLDER" : "Name of the person that administrate the ad"
+      },
+      "PHONE" : {
+        "TITLE" : "Phone",
+        "PLACEHOLDER" : "Phone number"
+      }
+    },
+    "ADD_BUTTON" : "Add Property",
+    "UPDATE_BUTTON" : "Update Property",
+    "MSG_ERR": {
+      "COUNTRIES": "Error at the getting of the countries!",
+      "COUNTIES": "Error at the getting of the counties!",
+      "LOCALITY": "Error at the getting of the localities!",
+      "VILLAGE" : "Error at the getting of the villages!",
+      "TITLE": "The title of this ad is mandatory!",
+      "DESCRIPTION": "The description of this ad is mandatory!",
+      "CONTACT_NAME": "The contact person name of this ad is mandatory!",
+      "PHONE" : "The phone number of this ad is mandatory!",
+      "PHONE_DIGIT" : "The phone number must contain only digits",
+      "PRICE" : "The price of this ad is mandatory!",
+      "PRICE_DIGIT": "The price must contain only digits!",
+      "AREA" : "The area of this ad is mandatory!",
+      "AREA_DIGIT" : "The area must contain only digits!",
+      "CURRENCY" : "The currency of this ad is mandatory!",
+      "VAL_COUNTRY" : "The country of this ad is mandatory!",
+      "VAL_COUNTY" : "The county of this ad is mandatory!",
+      "VAL_LOCALITY" : "The locality of this ad is mandatory!",
+      "VAL_VILLAGE" : "The village of this ad is mandatory!",
+      "VAL_STREET" : "The street of this ad is mandatory!",
+      "VAL_DETAILS" : "The address details of this ad is mandatory!",
+      "VAL_FILES" : "You need to upload at least one image of the ad!",
+      "MODAL_TITLE_SAVE" : "Create Ad",
+      "MODAL_CONTENT_SAVE" : "Do you want to create this ad",
+      "MODAL_YES" : "Yes",
+      "MODAL_NO" : "No",
+      "MODAL_DISMISS" : "The ad was not created!",
+      "SAVE_SUCCESS": "The ad was created succesfully!",
+      "SAVE_ERROR": "Error on the creation of the ad!",
+      "ERR_LOAD_DATA_EDIT" : "Error at the getting ad details",
+      "MODAL_TITLE_UPDATE" : "Update Ad",
+      "MODAL_CONTENT_UPDATE" : "Do you want to update this ad",
+      "MODAL_UPDATE_DISMISS" : "The ad was updated",
+      "SAVE_UPDATE_SUCCESS": "The ad was updated succesfully!",
+      "SAVE_UPDATE_ERROR": "Error on the updated of the ad!"
+    },
+    "UPLOADING_FILES": "Uploading files on server..",
+    "FINISH_UPLOADING_FILES": "Finish uploading files on server"
+  },
+
+  "LOGIN" : {
+    "TITLE": "Login",
+    "EMAIL": {
+      "TITLE": "Email Address",
+      "PLACEHOLDER": "name@example.com",
+      "REQUIRED" : "The email is required",
+      "INCCORECT" : "The email is incorrect"
+    },
+    "PASSWORD" : {
+      "TITLE": "Password",
+      "PLACEHOLDER": "Password",
+      "REQUIRED" : "The password is required"
+    },
+    "REMEMBER" : "Remember me",
+    "FORGOT" : "Forgot password",
+    "BTN_LOGIN" : "Login / Sign in",
+    "MSG_SIGNUP" : "Don't have an account ?",
+    "SIGNUP": "Sign Up"
+  },
+
+  "LOGIN_SERVICE": {
+    "GET_USER_BY_EMAIL": {
+      "NO_USER": "There is not user with that email!",
+      "CHECK": "Error on the verification of the email!"
+    },
+    "SEND_EMAIL_RESET_PASS": {
+      "ERR": "Error on the sending of the email!"
+    },
+    "GET_ID_USER_BY_RESET_TOKEN": {
+      "NO_USER": "There is not user with that token!",
+      "ERR": "Error at the token check!"
+    },
+    "RESET_PASSWORD": {
+      "ERR": "Error at the changing of the password!"
+    },
+    "GET_ID_USER_BY_VALIDATION_TOKEN": {
+      "NO_USER": "There is not user with that token!",
+      "ERR": "Error at the token check!"
+    },
+    "SEND_EMAIL_VALIDATION": {
+      "ERR": "Error on the sending of the validation email!"
+    },
+    "VALIDATE_EMAIL": {
+      "ERR": "Error at the validation of the email!"
+    }
+  },
+
+  "SOCKET_SERVICE": {
+    "HANDLE_PAGE_RELOAD": {
+      "REFRESH": "The app will be refresh in ",
+      "REFRESH_END": " seconds, please save your modifications!"
+    }
+  },
+
+  "FORGOT_PASSWORD": {
+    "TITLE": "Reset Your Password",
+    "SUBTITLE": "Please enter your email address. You will receive a link to create a new password via email.",
+    "EMAIL" : {
+      "TITLE" : "Email Address",
+      "PLACEHOLDER" : "name@exemple.com"
+    },
+    "BTN_SEND": "Send",
+    "REMEMBER": "Remember your password?",
+    "SIGNIN": "Sign in",
+    "MSG_ERR": {
+      "EMAIL_ERROR": "The email address is required",
+      "EMAIL_INCORRECT": "The email address is incorrect",
+      "SAVE_SUCCESS": "The reset email was send succesfully!"
+    }
+  },
+
+  "RESET_PASSWORD": {
+    "TITLE": "Pick a new password",
+    "PASSWORD" : {
+      "PLACEHOLDER" : "Password"
+    },
+    "PASSWORD_CONFIRM" : {
+      "PLACEHOLDER" : "Confirm password"
+    },
+    "BTN_SEND": "Reset password",
+    "MSG_ERR": {
+      "NO_USER_ERROR": "The user was not found",
+      "PASSWORD_ERROR": "The password is required",
+      "PASSWORD_CONFIRM_ERROR": "The password confirmation is required",
+      "PASSWORD_MATCH_ERROR": "The passwords don't match",
+      "VALIDATION_ERROR": "Error in the form validation",
+      "SAVE_SUCCESS": "The password was reset with success!"
+    }
+  },
+
+  "VALIDATE_EMAIL": {
+    "SUCCESS": {
+      "TITLE": "Success",
+      "MSG": "The email address was validated!",
+      "REDIRECT": "You will be soon forwarded to the main page of Landvesto.com"
+    },
+    "ERROR": {
+      "TITLE": "Error",
+      "MSG": "The email address was NOT validated!",
+      "REDIRECT": "The root cause: "
+    }
+  },
+
+  "SIGNUP" : {
+    "TITLE" : "Signup",
+    "EMAIL" : {
+      "TITLE" : "Email Address",
+      "PLACEHOLDER" : "name@exemple.com",
+      "REQUIRED" : "The email address is required",
+      "INCCORECT" : "The email is incorrect"
+    },
+    "PASSWORD" : {
+      "TITLE": "Password",
+      "PLACEHOLDER": "Password",
+      "REQUIRED" : "The password is required"
+    },
+    "PASSWORD_CONFIRM" : {
+      "TITLE": "Password confirm",
+      "PLACEHOLDER": "Password confirm",
+      "REQUIRED" : "The password confirmation is required",
+      "MATCH": "The passwords must match"
+    },
+    "ACCEPT" : {
+      "TITLE" : "I Accept Terms And Condition",
+      "REQUIRED" : "You must accept the Terms And Condition"
+    },
+    "BTN" : "Register",
+    "MSG_HAVE" : "Already have an account?",
+    "SIGNIN" : "Sign in"
+  },
+
+  "CHAT" : {
+    "TITLE" : "Chat",
+    "BTN_BUY" : "Buy",
+    "BTN_SELL" : "Sell",
+    "DELETE" : "Delete",
+    "ENTER_MESSAGE" : "Enter Message...",
+    "MSG_ERR": "Error"
+  },
+
+  "PROFILE_SETTING" : {
+    "BTN_MY" : "My properties",
+    "BTN_FAV" : "Favorite properties",
+    "TITLE": "Personal Detail",
+    "FIRST_NAME" : {
+      "TITLE" : "First Name",
+      "PLACEHOLDER" : "First Name"
+    },
+    "LAST_NAME" : {
+      "TITLE" : "Last Name",
+      "PLACEHOLDER" : "Last Name"
+    },
+    "EMAIL" : {
+      "TITLE" : "Your Email",
+      "PLACEHOLDER" : "name@exemple.com"
+    },
+    "WEBSITE" : {
+      "TITLE" : "Website",
+      "PLACEHOLDER" : "Url"
+    },
+    "PHONE" : {
+      "TITLE" : "Phone No.",
+      "PLACEHOLDER" : "Phone No."
+    },
+    "DESCRIPTION" : {
+      "TITLE" : "Description",
+      "PLACEHOLDER" : "Description"
+    },
+    "BTN_SAVE" : "Save Changes",
+    "PASSWORD": {
+      "TITLE": "Change password",
+      "OLD" : {
+        "TITLE" : "Old password",
+        "PLACEHOLDER" : "Old password"
+      },
+      "NEW" : {
+        "TITLE" : "New password",
+        "PLACEHOLDER" : "New password"
+      },
+      "RETYPE" : {
+        "TITLE" : "Re-type new password",
+        "PLACEHOLDER" : "Re-type new password"
+      },
+      "BTN_SAVE" : "Save password"
+    },
+    "DELETE" : {
+      "TITLE" : "Delete Account",
+      "SUBTITLE" : "Do you want to delete the account? Please press below 'Delete' button",
+      "BTN" : "Delete"
+    },
+    "VALIDATE_EMAIL" : {
+      "TITLE" : "Validate Email",
+      "SUBTITLE" : "Please validate your email address to access the full capabilities of this platform!",
+      "BTN" : "Validate",
+      "MSG_SUCCESS": "The email was send with success! Please verify your inbox and then follow the link to finish the validation process."
+    },
+    "MSG_ERR": {
+      "ERR": "Error",
+      "SUCCESS": "Succes",
+      "FIRST_NAME": "Please complete first name!",
+      "LAST_NAME": "Please complete last name!",
+      "EMAIL": "Please complete email!",
+      "OLD": "The old password is required!",
+      "NEW": "The password is required!",
+      "NEW_OLD": "The new password must be different from the old password!",
+      "RETYPE": "The password entered does not match the re-entered password!",
+      "OLD_MATCH": "The old password does not match!",
+      "ERR_PASS": "Error resetting password!",
+      "SUCCES_PASS": "The password has been changed successfully!"
+    },
+    "MODAL_DELETE": {
+      "TITLE" : "Confirm delete account",
+      "SUBTITLE": "Do you want to delete the account?",
+      "MSG_SUCCESS": "The account was deleted with success",
+      "YES": "Yes",
+      "NO": "No"
+    },
+    "IMAGE": {
+      "ERROR": "Error setting profile picture!",
+      "SUCCESS": "Profile picture has been successfully set!"
+    }
+  },
+
+  "PROPERTY_DETAIL" : {
+    "YES" : "Yes",
+    "NO" : "No",
+    "NO_INFORMATION" : "No information",
+    "ERROR" : "Error",
+    "ERR_MSG" : "Error at the getting ad details!",
+    "LAND_TYPE" : "Land type",
+    "SURFACE": "Surface",
+    "DIMENSION" : "Dimensions",
+    "FENCE" : "Fence",
+    "ACCESS" : "Access type",
+    "SURROUNDING" : "Surrounding",
+    "FACILITY": "Facilities",
+    "SELLER" : "Seller type",
+    "HISTORY" : {
+      "TITLE": "History and statistics",
+      "DATE" : "Date",
+      "MODIFICATION" : "Modification",
+      "PRICE" : "Price",
+      "VIEWS": "Views",
+      "SAVES" : "Saves",
+      "ADD" : "The ad has been added.",
+      "EDIT" : "The ad has been edited."
+    },
+    "PRICE" : {
+      "TITLE" : "Price",
+      "SELL" : "For sell",
+      "RENT" : "For rent",
+      "DAYSON" : "Days on LANDVESTO",
+      "DAYS" : "Days",
+      "PRICE_PER" : "Price per",
+      "PAYMENT" : "Payment type",
+      "SURFACE" : "Surface",
+      "BTN" : "Send message"
+    },
+    "ABOUT_SELLER" : "About seller",
+    "SHOW_NR" : "Show number",
+    "HAVE_QUE": "Have Question ? Get in touch!",
+    "BTN_CONTACT" : "Contact us"
+  },
+
+  "DRAFTS": {
+    "PAYMENT_TYPES": {
+      "MONTHLY": "Per month",
+      "YEARLY": "Per year",
+      "QUARTER": "Per quarter",
+      "SEMESTER": "Per semester",
+      "ONE_TYPE": "One time payment"
+    },
+    "LANDS_TYPES" : {
+      "BUILDING" : "for building",
+      "AGRICULTURAL" : "agricultural",
+      "RECREATIONAL" : "recreational",
+      "COMMERCIAL" : "commercial",
+      "WOOD" : "wood",
+      "MIXT" : "mixt",
+      "OTHER" : "other"
+    },
+
+    "ACCESS_TYPES" : {
+      "UNPAVED" : "unpaved",
+      "PAVED" : "paved",
+      "ASPHALTED" : "asphalted"
+    },
+    "SURROUNDING_TYPES" : {
+      "FOREST" : "forest",
+      "LAKE" : "lake",
+      "OPEN_FIELD" : "open field",
+      "MOUNTAIN" : "mountain",
+      "SEA" : "sea"
+    },
+    "MEDIA_TYPES" : {
+      "ELECTRICITY" : "electricity",
+      "WATER" : "water",
+      "GAS" : "gas",
+      "TELEPHONE" : "telephone",
+      "DRAINAGE" : "drainage",
+      "SEPTIC_TANK" : "septic tank"
+    },
+    "SELLER_TYPES" : {
+      "OWNER": "Owner",
+      "AGENT": "Agent"
+    }
+  },
+
+  "FAQS": {
+    "TITLE": "Frequently Asked Questions",
+    "BUY": {
+      "1": {
+        "QUESTION": "How does the land purchase process work?",
+        "ANSWER": "After choosing a property, you sign a reservation agreement, pay a deposit, and complete legal verification with our help. The full payment and transfer of ownership are done through a notary."
+      },
+      "2": {
+        "QUESTION": "Can foreigners buy land in this country?",
+        "ANSWER": "Yes, foreign citizens can legally purchase land under specific conditions, and our legal team will guide you through every step."
+      },
+      "3": {
+        "QUESTION": "Are there any extra fees besides the land price?",
+        "ANSWER": "Yes, expect legal, notary, registration, and administrative fees. We provide a full cost breakdown before you commit."
+      },
+      "4": {
+        "QUESTION": "Can I buy land remotely?",
+        "ANSWER": "Yes, we offer full remote services, including video tours, document handling, and signing through power of attorney."
+      }
+    },
+    "GENERAL": {
+      "1": {
+        "QUESTION": "What is Landvesto and how does it help me?",
+        "ANSWER": "Landvesto is a digital platform connecting land buyers and sellers. It simplifies the process with verified listings, legal support, and personalized assistance."
+      },
+      "2": {
+        "QUESTION": "Do I need a designer or architect to use Landvesto?",
+        "ANSWER": "No, Landvesto is for land sales. If you plan to build, we can recommend certified architects after the purchase."
+      },
+      "3": {
+        "QUESTION": "What types of land are available?",
+        "ANSWER": "We offer agricultural, residential, and commercial land in urban and rural areas, with full legal clarity."
+      },
+      "4": {
+        "QUESTION": "Can I get help with financing?",
+        "ANSWER": "Yes, we collaborate with financial institutions and can connect you with mortgage or investment options."
+      }
+    },
+    "SUPPORT": {
+      "1": {
+        "QUESTION": "How can I contact customer support?",
+        "ANSWER": "You can reach us via live chat or email. Our team is available 7 days a week."
+      },
+      "2": {
+        "QUESTION": "What should I do if I have technical issues?",
+        "ANSWER": "Please report any technical problems through the support section. Our team will respond promptly."
+      },
+      "3": {
+        "QUESTION": "How do I update my personal information?",
+        "ANSWER": "Log into your account, go to profile settings, and make the necessary changes. Contact us if you need help."
+      },
+      "4": {
+        "QUESTION": "Is there support for non-English speakers?",
+        "ANSWER": "Yes, our team speaks multiple languages and we offer translated documents on request."
+      }
+    },
+    "CONTACT": {
+      "TITLE": "Have a question ? Get in touch!",
+      "SUBTITLE": "A great plateform to buy, sell and rent your lands without any agent or commisions.",
+      "BUTTON": "Contact us"
+    }
+  },
+
+  "PRIVACY": {
+    "TITLE": "Privacy Policy",
+    "EFFECTIVE_DATE": "Effective Date: 01.08.2025",
+    "INTRO": "We are committed to protecting your privacy and ensuring that your personal data is handled safely and responsibly.",
+    "INFORMATION": "1. Information We Collect",
+    "INFORMATION_TEXT": "We collect the following types of information:\n\na. Personal Information - Name, email address, phone number, nationality, ID documents (optional), payment details (limited).\n\nb. Land and Listing Information - Property descriptions, locations, documents, photos, and prices.\n\nc. Usage Data - IP, browser, session activity.\n\nd. Communication Data - Messages and inquiries.",
+    "USAGE": "2. How We Use Your Information",
+    "USAGE_TEXT": "To provide and manage the platform, enable communication, process commissions, verify listings, improve services, and comply with laws.",
+    "LEGAL_BASIS": "3. Legal Basis for Processing (EU/EEA Users)",
+    "LEGAL_BASIS_TEXT": "Your data is processed based on consent, contract performance, legal obligations, or legitimate interest.",
+    "SHARING": "4. Sharing Your Information",
+    "SHARING_TEXT": "We may share data with payment processors, legal service providers, third-party tools, and authorities if required by law.",
+    "RETENTION": "5. Data Retention",
+    "RETENTION_TEXT": "We retain data as needed for service delivery, legal compliance, dispute resolution, and account management.",
+    "SECURITY": "6. Security",
+    "SECURITY_TEXT": "We use appropriate measures to protect your data, but no internet transmission is 100% secure.",
+    "INTERNATIONAL": "7. International Data Transfers",
+    "INTERNATIONAL_TEXT": "Your data may be processed in other countries. We apply safeguards for these transfers.",
+    "RIGHTS": "8. Your Rights",
+    "RIGHTS_TEXT": "You have the right to access, correct, delete, restrict processing, withdraw consent, and file complaints.",
+    "COOKIES": "9. Cookies",
+    "COOKIES_TEXT": "We use cookies to store preferences, track usage, and enable functionality. You can control cookies via your browser.",
+    "CHILDREN": "10. Children's Privacy",
+    "CHILDREN_TEXT": "Our services are not intended for users under 18. We do not knowingly collect data from minors.",
+    "CHANGES": "11. Changes to This Policy",
+    "CHANGES_TEXT": "We may update this policy periodically. Updates will appear here with a new effective date.",
+    "CONTACT": "12. Contact Us",
+    "CONTACT_TEXT": "For questions, contact us at contact@landvesto.com.",
+    "PRINT": "PRINT"
+  },
+
+  "TERMS": {
+    "TITLE": "Terms of Service",
+    "EFFECTIVE_DATE": "Effective Date: 01.08.2025",
+    "INTRO": "Welcome to Landvesto, a platform that connects land sellers with buyers around the world. These Terms of Service ('Terms') govern your use of our website, mobile application, and all related services.\nBy using our platform, you confirm that you have read, understood, and agree to be bound by these Terms.",
+
+    "ACCOUNTS": "1. Account Registration & Eligibility",
+    "ACCOUNTS_TEXT": "You must be at least 18 years old to create an account.\nYou agree to provide accurate, current, and complete information during registration.\nYou are responsible for maintaining the confidentiality of your login credentials and are fully responsible for all activities that occur under your account.\nYou agree to notify us immediately of any unauthorized use of your account.",
+
+    "SERVICES": "2. Scope of Services",
+    "SERVICES_TEXT": "Landvesto provides a digital platform where landowners can list land for sale and potential buyers can browse and contact sellers.\nWe do not act as a real estate agent, broker, or legal intermediary. Landvesto does not participate in the actual transfer of property ownership.\nAny land sale is a private agreement between buyer and seller, often involving third-party legal or notary services.",
+
+    "FEES": "3. Commission and Payment Terms",
+    "FEES_TEXT": "The use of Landvesto is free for buyers.\nSellers agree to pay a 3% commission on the final sale price of any property sold through the platform.\nCommission is payable after the sale is concluded, and failure to pay may result in suspension of your account, legal recovery action, or listing restrictions.\nWe may provide invoices and reminders electronically.",
+
+    "USER_OBLIGATIONS": "4. User Responsibilities",
+    "USER_OBLIGATIONS_TEXT": "Users agree not to:\n- Post false, misleading, or fraudulent land listings\n- Upload illegal content or violate intellectual property rights\n- Harass or abuse other users\n- Use the platform for unauthorized commercial purposes\n\nLandvesto reserves the right to remove any content or terminate access for violations without prior notice.",
+
+    "LISTINGS": "5. Land Listings and Verification",
+    "LISTINGS_TEXT": "Sellers must provide accurate and truthful information about land they list for sale, including ownership documents, location, price, and legal status.\nWe may offer optional listing verification but do not guarantee the accuracy of any listing.\nLandvesto is not responsible for verifying land ownership, legal documents, or land boundaries.",
+
+    "INTELLECTUAL": "6. Intellectual Property",
+    "INTELLECTUAL_TEXT": "All content on the platform, including text, images, logos, and software, is owned by Landvesto or its licensors.\nYou may not reproduce, distribute, or create derivative works without our written permission.\nYou retain ownership of content you submit, but grant us a non-exclusive license to display, use, and promote it.",
+
+    "TERMINATION": "7. Termination and Suspension",
+    "TERMINATION_TEXT": "We may suspend or terminate your account and access to our services at any time if you violate these Terms, submit false information, or misuse the platform.\nYou may delete your account at any time by contacting our support team.\nUpon termination, any obligations to pay outstanding commissions remain valid.",
+
+    "LIABILITY": "8. Limitation of Liability",
+    "LIABILITY_TEXT": "Landvesto is not liable for:\n- Losses from transactions between buyers and sellers\n- Inaccuracies in land listings\n- Any legal disputes between parties\n- Technical errors, outages, or unauthorized access\nUse of the platform is at your own risk. We provide the platform 'as is' without warranties of any kind.",
+
+    "PRIVACY": "9. Privacy and Data Protection",
+    "PRIVACY_TEXT": "Our Privacy Policy outlines how we collect, use, and protect your personal data.\nBy using the platform, you agree to our data practices.\nWe take reasonable steps to secure your data, but no system is fully immune to risks.",
+
+    "CHANGES": "10. Changes to Terms",
+    "CHANGES_TEXT": "We may update these Terms from time to time. Changes will be posted on this page with an updated effective date.\nYour continued use of the platform after changes means you accept the revised Terms.",
+
+    "CONTACT": "11. Contact Information",
+    "CONTACT_TEXT": "If you have questions or concerns regarding these Terms, please contact us at: contact@landvesto.com"
+  },
+
+  "GDPR": {
+    "TITLE": "Consent regarding the processing of your personal data",
+    "LINE_1": "We inform you that, starting from May 25, 2018, the provisions of Regulation (EU) No. 679/2016 of the European Parliament and the Council, regarding the protection of individuals with regard to the processing of personal data and the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation), are applicable.",
+    "LINE_2": "In accordance with the General Data Protection Regulation, you must express your consent regarding the processing of your personal data provided for the purpose of accessing or receiving services offered by SC TULOCO SRL through the Landvesto platform.",
+    "LINE_3": "The PURPOSE of processing personal data results from the signed service contract and, therefore, the data will be processed solely for contractual and legal purposes. Processing personal data facilitates the performance of activities related to the contract and/or legal obligations.",
+    "LINE_4": "The RIGHTS provided by the new regulation are the following:",
+    "LINE_5": "1. The right of access is the right to obtain confirmation from us as to whether or not we process your data, and if so, to access that data and information about how it is processed.",
+    "LINE_6": "2. The right to data portability means you can receive your personal data in a structured, commonly used, machine-readable format, and have the right to transmit those data to another controller.",
+    "LINE_7": "3. The right to object refers to the right to oppose the processing of personal data when it serves a public or legitimate interest.",
+    "LINE_8": "4. The right to rectification refers to correcting inaccurate personal data without undue delay.",
+    "LINE_9": "5. The right to erasure / the right to be forgotten refers to the right to have your collected data deleted without undue delay in any of the following situations: the data is no longer needed for the purposes for which it was collected, you have withdrawn your consent, there is no other legal basis for processing, you object to the processing, or the data must be deleted to comply with a legal obligation.",
+    "LINE_10": "6. The right to restrict processing is the right to obtain restriction of processing of your personal data by the data controller.",
+    "LINE_11": "If you refuse to give your consent for the processing of your personal data, you will not be able to benefit from the services provided through the Landvesto platform (including subscription-based services).",
+    "LINE_12": "Sincerely,",
+    "LINE_13": "The TULOCO Team",
+    "CONFIRM": "Confirm",
+    "LATER": "Later"
+  },
+
+  "TOPBAR" : {
+    "PROFILE" : "Profile",
+    "CHAT" : "Chat",
+    "LOGOUT": "Logout"
+  },
+
+  "FOOTER" : {
+    "SUBSCRIBE": {
+      "TITLE": "Subscribe to Newsletter!",
+      "CONTENT": "Subscribe to get latest updates and information.",
+      "EMAIL" : "Enter your email",
+      "BTN": "Subscribe"
+    },
+    "CONTENT": "A great plateform to buy, sell and rent your lands without any agent or commisions",
+    "COMPANY" : "Company",
+    "PROFILE": "Profile settings",
+    "POPERTIES": "My properties",
+    "MESSAGES": "Messages",
+    "LOGIN": "Login",
+    "SIGNUP": "Signup",
+    "LINKS": "Usefull Links",
+    "TERMS": "Terms of Services",
+    "POLICY": "Privacy Policy",
+    "FAQ": "FAQs",
+    "CONTACT": "Contact",
+    "CONTACT_DETAILS": "Contact Details"
+  },
+
+  "GET_IN_TOUCH": {
+    "TITLE" : "Have Question ? Get in touch!",
+    "SUBTITLE": "A great plateform to buy, sell and rent your lands without any agent or commisions.",
+    "BTN": "Contact us"
+  },
+
+  "REJECTED_DIALOG": {
+    "TITLE" : "Reject the approval of the ad",
+    "REASON": "Reason",
+    "REASON_PLACEHOLDER": "The reason for this ad rejection",
+    "CONFIRM_BTN": "Confirm rejection",
+    "EXIT_BTN": "Exit",
+    "MSG_ERR": "The rejection reason is mandatory"
+  },
+
+  "AWAITING_APPROVAL": {
+    "TITLE": "Ads waiting for approval",
+    "PRICE": "Price",
+    "PRICE_PER": "Price per",
+    "PAYMENT": "Payment type",
+    "APPROVE": "Approve",
+    "REJECT": "Reject",
+    "NO_DATA_TITLE": "No listings found",
+    "NO_DATA": "It looks like no listings were found waiting for approval.",
+    "MSG_ERROR" : "Error!",
+    "APPROVE_TITLE": "Approve ad",
+    "APPROVE_MODAL_TITLE" : "Do you want to approve the ad with the title",
+    "YES" : "Yes",
+    "NO" : "No",
+    "APPROVE_SUCCESS": "The ad was approved with success",
+    "APPROVE_ERROR": "There was a problem approving the ad",
+    "REJECT_SUCCESS": "The ad was rejected",
+    "REJECT_ERROR": "There was a problem rejecting the ad"
+  },
+
+  "ADMIN_SIDEBAR" : {
+    "DASHBOARD": "Dashboard",
+    "AWAITING_APPROVAL" : "Awaiting approval ads",
+    "ADD_BLOG_POST" : "Add a new blog post",
+    "ERROR" : "Errors"
+  },
+
+  "ADMIN_ERRORS" : {
+    "TITLE" : "Errors",
+    "MSG_ERR" : "Error!",
+    "NUMBER" : "No.",
+    "ID_USER" : "Id User",
+    "EMAIL" : "Email",
+    "ACTION" : "Action",
+    "ERROR" : "Error",
+    "DATE" : "Date - Hour",
+    "DETAIL" : "Details",
+    "NO_DATA" : "No data available!",
+    "VIEW_ERR_TITLE" : "Details error",
+    "CLOSE" : "Close",
+    "MODAL_DELETE" : {
+      "TITLE" : "Delete error",
+      "SUBTITLE" : "Do you want to delete the error?",
+      "YES" : "Yes",
+      "NO" : "No",
+      "MSG_SUCCESS" : "Error deleted successfully",
+      "MSG_ERR" : "Error deleting"
+    }
+  }
+}

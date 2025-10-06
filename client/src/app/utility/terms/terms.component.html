@@ -1,0 +1,70 @@
+<app-navbar [childMessage]="'true'" [navLight]="true"/>
+
+<section class="relative table w-full py-32 lg:py-36 bg-[url('/assets/images/bg/01.jpg')] bg-no-repeat bg-center bg-cover">
+    <div class="absolute inset-0 bg-black opacity-80"></div>
+    <div class="container relative">
+        <div class="grid grid-cols-1 text-center mt-10">
+            <h3 class="md:text-4xl text-3xl md:leading-normal leading-normal font-medium text-white">{{ "TERMS.TITLE" | translate }}</h3>
+        </div><!--end grid-->
+    </div><!--end container-->
+</section><!--end section-->
+<div class="relative">
+    <div class="shape overflow-hidden z-1 text-white dark:text-slate-900">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+        </svg>
+    </div>
+</div>
+
+<section class="relative lg:py-24 py-16">
+    <div class="container relative">
+        <div class="md:flex justify-center">
+            <div class="md:w-3/4">
+                <div class="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
+                    <h5 class="text-xl font-medium mb-4">{{ "TERMS.EFFECTIVE_DATE" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 text-justify">{{ "TERMS.INTRO" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "TERMS.ACCOUNTS" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 text-justify whitespace-pre-line">{{ "TERMS.ACCOUNTS_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "TERMS.SERVICES" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 text-justify whitespace-pre-line">{{ "TERMS.SERVICES_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "TERMS.FEES" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 text-justify whitespace-pre-line">{{ "TERMS.FEES_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "TERMS.USER_OBLIGATIONS" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 text-justify whitespace-pre-line">{{ "TERMS.USER_OBLIGATIONS_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "TERMS.LISTINGS" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 text-justify whitespace-pre-line">{{ "TERMS.LISTINGS_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "TERMS.INTELLECTUAL" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 text-justify whitespace-pre-line">{{ "TERMS.INTELLECTUAL_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "TERMS.TERMINATION" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 text-justify whitespace-pre-line">{{ "TERMS.TERMINATION_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "TERMS.LIABILITY" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 text-justify whitespace-pre-line">{{ "TERMS.LIABILITY_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "TERMS.PRIVACY" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 text-justify whitespace-pre-line">{{ "TERMS.PRIVACY_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "TERMS.CHANGES" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 text-justify whitespace-pre-line">{{ "TERMS.CHANGES_TEXT" | translate }}</p>
+
+                    <h5 class="text-xl font-medium mb-4 mt-8">{{ "TERMS.CONTACT" | translate }}</h5>
+                    <p class="indent-8 text-slate-400 text-justify whitespace-pre-line">{{ "TERMS.CONTACT_TEXT" | translate }}</p>
+
+                    <!-- <div class="mt-6">
+                        <a href="" class="btn bg-green-600 hover:bg-green-700 text-white rounded-md">Accept</a>
+                        <a href="" class="btn bg-transparent hover:bg-green-600 border border-green-600 text-green-600 hover:text-white rounded-md ms-2">Decline</a>
+                    </div> -->
+                </div>
+            </div><!--end -->
+        </div><!--end grid-->
+    </div><!--end container-->
+</section>
+
+<app-footer/>

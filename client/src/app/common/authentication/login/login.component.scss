@@ -1,0 +1,16 @@
+$color-error: #f44336;
+
+.text-danger {
+    color: $color-error;
+}
+
+.border-error {
+    border: 1px solid $color-error !important;
+}
+
+.auth-error {
+    height: 20px;
+    color: $color-error;
+    text-align: center;
+    margin-top: 10px;
+}

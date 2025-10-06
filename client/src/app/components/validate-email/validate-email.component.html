@@ -1,0 +1,30 @@
+<section class="md:h-screen py-36 flex items-center relative overflow-hidden zoom-image">
+  <div class="absolute inset-0 image-wrap z-1 bg-[url('/assets/images/bg/01.jpg')] bg-no-repeat bg-center bg-cover"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black z-2" id="particles-snow"></div>
+  <div class="container relative z-3">
+    <div class="flex justify-center">
+      <div class="max-w-[400px] w-full m-auto p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-700 rounded-md">
+        <a routerLink="/"><img src="assets/images/logo-icon-64.png" class="mx-auto" alt=""></a>
+        @if(success) {
+          <h5 class="my-6 text-xl text-center font-semibold">{{'VALIDATE_EMAIL.SUCCESS.TITLE' | translate }}</h5>
+          <div class="p-0 text-center">
+            <p class="text-green-600"><b>{{'VALIDATE_EMAIL.SUCCESS.MSG' | translate }}</b></p>
+            <br/>
+            <p>{{'VALIDATE_EMAIL.SUCCESS.REDIRECT' | translate }}</p>
+          </div>
+        } @else {
+          <h5 class="my-6 text-xl text-center font-semibold">{{'VALIDATE_EMAIL.ERROR.TITLE' | translate }}</h5>
+          <div class="p-0 text-center">
+            <p class="text-red-600"><b>{{'VALIDATE_EMAIL.ERROR.MSG' | translate }}</b></p>
+            <br/>
+            <p>{{'VALIDATE_EMAIL.ERROR.REDIRECT' | translate }} <b>{{errorMessage}}</b></p>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="fixed bottom-3 end-3 z-10">
+  <a routerLink="/" class="back-button btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full"><i class="mdi mdi-arrow-left"></i></a>
+</div>

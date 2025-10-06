@@ -1,0 +1,94 @@
+<app-navbar/>
+
+<section class="relative lg:pt-20 pt-16">
+  <div class="bg-gray-50 p-6 lg:p-12">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
+            <div class="lg:col-span-7 md:col-span-6">
+                <img src="assets/images/svg/contact.svg" alt="">
+            </div>
+
+            <div class="lg:col-span-5 md:col-span-6">
+                <div class="lg:me-5">
+                    <div class="bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-700 p-6">
+                        <h3 class="mb-1 text-2xl leading-normal font-medium">{{'CONTACT.SUBTITLE' | translate }}</h3>
+                        <a href="mailto:contact@landvesto.com" class="btn btn-link text-green-600 hover:text-green-600 after:bg-green-600 transition duration-500 mb-6">contact&#64;landvesto.com</a>
+
+                        <form>
+                            <div class="grid lg:grid-cols-12 lg:gap-6">
+                                <div class="lg:col-span-6 mb-5">
+                                    <label for="name" class="font-medium" [ngClass]='required.name ? "text-red-600" : ""'>{{'CONTACT.NAME.TITLE' | translate }}:</label>
+                                    <input
+                                        id="name"
+                                        name="name"
+                                        type="text"
+                                        [(ngModel)]='contact_form.name'
+                                        class="form-input mt-2 dark:bg-slate-800"
+                                        [ngClass]='required.name ? "error-border" : ""'
+                                        (ngModelChange)="required.name = !contact_form.name"
+                                        placeholder="{{'CONTACT.NAME.PLACEHOLDER' | translate }} :"
+                                    >
+                                </div>
+
+                                <div class="lg:col-span-6 mb-5">
+                                    <label for="email" class="font-medium" [ngClass]='required.email ? "text-red-600" : ""'>{{'CONTACT.EMAIL.TITLE' | translate }}:</label>
+                                    <input
+                                        id="email"
+                                        name="email"
+                                        type="text"
+                                        [(ngModel)]='contact_form.email'
+                                        class="form-input mt-2 dark:bg-slate-800"
+                                        [ngClass]='required.email ? "error-border" : ""'
+                                        (ngModelChange)="required.email = !contact_form.email"
+                                        placeholder="{{'CONTACT.EMAIL.PLACEHOLDER' | translate }} :"
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1">
+                                <div class="mb-5">
+                                    <label for="subject" class="font-medium" [ngClass]='required.subject ? "text-red-600" : ""'>{{'CONTACT.QUESTION.TITLE' | translate }}:</label>
+                                    <input
+                                        id="subject"
+                                        name="subject"
+                                        type="text"
+                                        [(ngModel)]='contact_form.subject'
+                                        class="form-input mt-2 dark:bg-slate-800"
+                                        [ngClass]='required.subject ? "error-border" : ""'
+                                        (ngModelChange)="required.subject = !contact_form.subject"
+                                        placeholder="{{'CONTACT.QUESTION.PLACEHOLDER' | translate }} :"
+                                    >
+                                </div>
+
+                                <div class="mb-5">
+                                    <label for="message" class="font-medium" [ngClass]='required.message ? "text-red-600" : ""'>{{'CONTACT.COMMENT.TITLE' | translate }}:</label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        [(ngModel)]='contact_form.message'
+                                        class="form-input mt-2 textarea h-28"
+                                        [ngClass]='required.message ? "error-border" : ""'
+                                        (ngModelChange)="required.message = !contact_form.message"
+                                        placeholder="{{'CONTACT.COMMENT.PLACEHOLDER' | translate }} :"
+                                    ></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" id="submit" name="send" (click)="save()" class="btn bg-green-600 hover:bg-green-700 text-white rounded-md">{{'CONTACT.BTN_SEND.TITLE' | translate }}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div><!--end container-->
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 text-center text-gray-500 text-sm bg-gray-100">
+    <p>© 2025 Money Hub. All rights reserved.</p>
+    <div class="mt-4 space-x-4">
+        <a href="#" class="hover:text-gray-700">Terms & Conditions</a>
+        <a href="#" class="hover:text-gray-700">Privacy Policy</a>
+        <a href="#" class="hover:text-gray-700">Contact</a>
+    </div>
+</footer>

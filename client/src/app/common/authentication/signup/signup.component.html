@@ -1,0 +1,92 @@
+<section class="md:h-screen py-36 flex items-center relative overflow-hidden zoom-image">
+    <div class="absolute inset-0 image-wrap z-1 bg-[url('/assets/images/bg/01.jpg')] bg-no-repeat bg-center bg-cover"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black z-2" id="particles-snow"></div>
+    <div class="container relative z-3">
+        <div class="flex justify-center">
+            <div class="max-w-[500px] w-full m-auto p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-700 rounded-md">
+                <a routerLink="/"><img src="assets/images/logo-icon-64.png" class="mx-auto" alt=""></a>
+                <h5 class="my-6 text-xl text-center font-semibold">{{'SIGNUP.TITLE' | translate }}</h5>
+                <form class="text-start">
+                    <div class="grid grid-cols-1">
+
+                        <div class="mb-4">
+                            <label class="font-semibold" for="LoginEmail">{{'SIGNUP.EMAIL.TITLE' | translate }}</label>
+                            <input class="form-input mt-3" id="LoginEmail" type="email" [(ngModel)]="email" (ngModelChange)="errors.email = false; errors.emailInvalid = false; errorMessage = '';" name="email"  maxlength="100" placeholder="{{'SIGNUP.EMAIL.PLACEHOLDER' | translate }}" [class.border-error]="errors.email || errors.emailInvalid">
+                            @if (errors.email) {
+                                <label class="text-danger">
+                                    {{'SIGNUP.EMAIL.REQUIRED' | translate }}
+                                </label>
+                            }
+                            @if (errors.emailInvalid) {
+                                <label class="text-danger">
+                                    {{'SIGNUP.EMAIL.INCCORECT' | translate }}
+                                </label>
+                            }
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="font-semibold" for="LoginPassword">{{'SIGNUP.PASSWORD.TITLE' | translate }}</label>
+                            <input class="form-input mt-3" id="LoginPassword" type="password" [(ngModel)]="password" (ngModelChange)="errors.password = false; errorMessage = '';" name="password" maxlength="30" placeholder="{{'SIGNUP.PASSWORD.PLACEHOLDER' | translate }}" [class.border-error]="errors.password">
+                            @if (errors.password) {
+                                <label class="text-danger">
+                                    {{'SIGNUP.PASSWORD.REQUIRED' | translate }}
+                                </label>
+                            }
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="font-semibold" for="LoginPasswordConfirm">{{'SIGNUP.PASSWORD_CONFIRM.TITLE' | translate }}</label>
+                            <input class="form-input mt-3" id="LoginPasswordConfirm" type="password" [(ngModel)]="password_confirm" (ngModelChange)="errors.password_confirm = false; errorMessage = '';" name="password_confirm" maxlength="30" placeholder="{{'SIGNUP.PASSWORD_CONFIRM.PLACEHOLDER' | translate }}" [class.border-error]="errors.password_confirm || errors.password_match">
+                            @if (errors.password_confirm) {
+                                <label class="text-danger">
+                                    {{'SIGNUP.PASSWORD_CONFIRM.REQUIRED' | translate }}
+                                </label>
+                            }
+                            @if (errors.password_match) {
+                                <label class="text-danger">
+                                    {{'SIGNUP.PASSWORD_CONFIRM.MATCH' | translate }}
+                                </label>
+                            }
+                        </div>
+
+                        <!-- Stripe Placeholder -->
+                        <div class="mb-4">
+                            <label class="font-semibold" for="Payment">Payment</label>
+                            <div class="mt-2 p-4 border-2 border-dashed border-gray-300 rounded-lg text-center">
+                                <ngx-stripe-card
+                                    [options]="cardOptions"
+                                    [elementsOptions]="elementsOptions"
+                                ></ngx-stripe-card>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="flex items-center mb-0">
+                                <input class="form-checkbox rounded border-gray-200 dark:border-gray-800 text-indigo-600 focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50 me-2" type="checkbox" id="AcceptT&C"
+                                [(ngModel)]="accept_terms" (ngModelChange)="errors.accept_terms = false; errorMessage = '';" name="accept_terms" [class.border-error]="errors.accept_terms">
+                                <label class="form-check-label text-slate-400" for="AcceptT&C"><a routerLink="/" class="text-indigo-600">{{'SIGNUP.ACCEPT.TITLE' | translate }}</a></label>
+                            </div>
+                            @if (errors.accept_terms) {
+                                <p class="text-danger">
+                                    {{'SIGNUP.ACCEPT.REQUIRED' | translate }}
+                                </p>
+                            }
+                        </div>
+
+                        <div class="mb-4">
+                            <button class="btn bg-indigo-600 hover:bg-indigo-700 text-white rounded-md w-full" (click)="handleSubmit()">{{'SIGNUP.BTN' | translate }}</button>
+                        </div>
+
+                        <div class="text-center">
+                            <span class="text-slate-400 me-2">{{'SIGNUP.MSG_HAVE' | translate }} </span> <a routerLink="/login" class="text-black dark:text-white font-bold">{{'SIGNUP.SIGNIN' | translate }}</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="fixed bottom-3 end-3 z-10">
+    <a routerLink="/" class="back-button btn btn-icon bg-indigo-600 hover:bg-indigo-700 text-white rounded-full"><i class="mdi mdi-arrow-left"></i></a>
+</div>

@@ -1,0 +1,53 @@
+<div class="top-header">
+    <div class="header-bar flex justify-between">
+        <div class="flex items-center space-x-1">
+            <a [routerLink]="[]" (click)="$event.preventDefault()" class="xl:hidden block me-2">
+                <img src="assets/images/logo-icon-32.png" class="md:hidden block" alt="">
+                <span class="md:block hidden">
+                    <img [src]="'/assets/images/logo-dark.png'" class="inline-block dark:hidden" alt="">
+                    <img [src]="'/assets/images/logo-light.png'" class="hidden dark:inline-block" alt="">
+                </span>
+            </a>
+
+            <a
+                id="close-sidebar"
+                class="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-[20px] text-center bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 border border-gray-100 dark:border-gray-800 text-slate-900 dark:text-white rounded-md"
+                [routerLink]="[]"
+                (click)="emitToggleClassEvent()"
+            >
+                <i class="mdi mdi-menu text-slate-900 dark:text-white align-middle text-base cursor-pointer"></i>
+            </a>
+        </div>
+
+        <ul class="list-none mb-0 space-x-1">
+            <li class="inline mb-0 dropdown inline-block relative">
+                <app-language-settings></app-language-settings>
+            </li>
+
+            <li class="dropdown inline-block relative" (clickOutside)="onClickedOutside($event)">
+                <button class="dropdown-toggle items-center" type="button" (click)="userDropdown()">
+                    <span
+                        class="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-[20px] text-center bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 border border-gray-100 dark:border-gray-800 text-slate-900 dark:text-white rounded-md"
+                    >
+                        <img [src]="userDetails.profile_img_path" class="rounded-md" alt="">
+                    </span>
+                </button>
+
+                <div class="dropdown-menu absolute end-0 m-0 mt-4 z-10 w-44 rounded-md overflow-hidden bg-white dark:bg-slate-900 shadow dark:shadow-gray-700" [ngClass]="userMenu ?  '' : 'hidden'">
+                    <ul class="py-2 text-start">
+                        <li>
+                            <a [routerLink]="'/user/profile-setting'" class="block py-1 px-5 dark:text-white/70 hover:text-green-600 dark:hover:text-white"><i class="mdi mdi-account-outline me-2"></i>{{'TOPBAR.PROFILE' | translate }}</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="'/user/chat'" class="block py-1 px-4 dark:text-white/70 hover:text-green-600 dark:hover:text-white"><i class="mdi mdi-chat-outline me-2"></i>{{'TOPBAR.CHAT' | translate }}</a>
+                        </li>
+                        <li class="border-t border-gray-100 dark:border-gray-800 my-2"></li>
+                        <li>
+                            <a (click)="logout()" class="block py-1 px-4 cursor-pointer dark:text-white/70 hover:text-green-600 dark:hover:text-white"><i class="mdi mdi-logout me-2"></i>{{'TOPBAR.LOGOUT' | translate }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

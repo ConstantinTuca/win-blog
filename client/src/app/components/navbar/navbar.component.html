@@ -1,0 +1,58 @@
+<nav id="topnav" class="defaultscroll is-sticky" [ngClass]="tagline ? 'tagline-height' : ''" (window:scroll)="windowScroll()">
+    <div class="container relative">
+        <!-- Logo container-->
+
+        <a *ngIf="navLight === true" class="logo" routerLink="/">
+            <span class="inline-block dark:hidden">
+                <img src="assets/images/logo-dark.png" class="l-dark" height="24" alt="">
+                <img src="assets/images/logo-light.png" class="l-light" height="24" alt="">
+            </span>
+            <img src="assets/images/logo-light.png" height="24" class="hidden dark:inline-block" alt="">
+        </a>
+
+        <a *ngIf="!navLight === true" class="logo" routerLink="/">
+            <img src="assets/images/logo-dark.png" class="inline-block dark:hidden" alt="">
+            <img src="assets/images/logo-light.png" class="hidden dark:inline-block" alt="">
+        </a>
+        <!-- End Logo container-->
+
+        <!-- Start Mobile Toggle -->
+        <div class="menu-extras">
+            <div class="menu-item">
+                <a class="navbar-toggle" id="isToggle" (click)="toggleMenu()">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- End Mobile Toggle -->
+
+        <!--Login button Start-->
+        <ul class="settings-section list-none mb-0">
+            <li class="inline mb-0 dropdown inline-block relative">
+              <app-language-settings></app-language-settings>
+            </li>
+            <li class="inline mb-0">
+                <a routerLink="/user" class="btn btn-icon bg-indigo-600 hover:bg-indigo-700 border-indigo-600 dark:border-indigo-600 text-white rounded-full"><i class="mdi mdi-account-outline text-[22px] size-7"></i></a>
+            </li>
+            <li class="sm:inline ps-1 mb-0 hidden">
+                <a routerLink="/signup" class="btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 dark:border-indigo-600 text-white rounded-full">{{'NAVBAR.SIGNUP' | translate }}</a>
+            </li>
+        </ul>
+        <!--Login button End-->
+
+        <div id="navigation" [style]="status  ? 'display: block;' : 'display: none;'">
+            <!-- Navigation Menu-->
+            <ul [class]="childMessage === 'true' ? 'navigation-menu justify-end nav-light' : 'navigation-menu justify-end'">
+                <li><a routerLink="/blog" class="sub-menu-item">Blog</a></li>
+
+                <li><a routerLink="/past-winners" class="sub-menu-item">Past winners</a></li>
+
+                <li><a routerLink="/contact" class="sub-menu-item">Contact</a></li>
+            </ul><!--end navigation menu-->
+        </div><!--end navigation-->
+    </div><!--end container-->
+</nav>
